@@ -1,0 +1,65 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/tenor/OneDrive/Documentos/FAC-Decoder/simulation/modelsim
+vDecoder_4To2bits
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1727467790
+!i10b 1
+!s100 ?cz;DZ29Kzjm5M6[8OA6d2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Io8zY_N:C0jQSjiCMO2OMS1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1727467575
+8C:/Users/tenor/OneDrive/Documentos/FAC-Decoder/Decoder_4To2bits.sv
+FC:/Users/tenor/OneDrive/Documentos/FAC-Decoder/Decoder_4To2bits.sv
+!i122 0
+L0 1 43
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1727467790.000000
+!s107 C:/Users/tenor/OneDrive/Documentos/FAC-Decoder/Decoder_4To2bits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/FAC-Decoder|C:/Users/tenor/OneDrive/Documentos/FAC-Decoder/Decoder_4To2bits.sv|
+!i113 1
+Z5 o-sv -work work
+Z6 !s92 -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/FAC-Decoder
+Z7 tCvgOpt 0
+n@decoder_4@to2bits
+vtb_Decoder_4To2bits
+R1
+!s110 1727467791
+!i10b 1
+!s100 hF<akCb^[I9bz7Rh]R;=l2
+R2
+IKmgoI0WcHgYBSHI<<]KZj3
+R3
+S1
+R0
+w1727467653
+8C:/Users/tenor/OneDrive/Documentos/FAC-Decoder/tb_Decoder_4To2bits.sv
+FC:/Users/tenor/OneDrive/Documentos/FAC-Decoder/tb_Decoder_4To2bits.sv
+!i122 1
+L0 1 92
+R4
+r1
+!s85 0
+31
+!s108 1727467791.000000
+!s107 C:/Users/tenor/OneDrive/Documentos/FAC-Decoder/tb_Decoder_4To2bits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/FAC-Decoder|C:/Users/tenor/OneDrive/Documentos/FAC-Decoder/tb_Decoder_4To2bits.sv|
+!i113 1
+R5
+R6
+R7
+ntb_@decoder_4@to2bits

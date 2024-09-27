@@ -1,0 +1,29 @@
+|Decoder_4To2bits
+A => U7.IN0
+A => U8.IN0
+A => U10.IN0
+A => U5.IN0
+A => U6.IN0
+A => U9.IN0
+B => U5.IN1
+B => U7.IN1
+B => U12.IN0
+B => U9.IN1
+B => U10.IN1
+B => U13.IN0
+C => U7.IN2
+C => U8.IN1
+C => U9.IN2
+C => U5.IN2
+C => U6.IN1
+C => U10.IN2
+D => U6.IN2
+D => U8.IN2
+D => U12.IN1
+D => U9.IN3
+D => U10.IN3
+D => U13.IN1
+Y0 <= U11.DB_MAX_OUTPUT_PORT_TYPE
+Y1 <= U14.DB_MAX_OUTPUT_PORT_TYPE
+
+
