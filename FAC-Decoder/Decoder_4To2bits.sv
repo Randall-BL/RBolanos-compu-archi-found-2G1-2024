@@ -1,6 +1,7 @@
 module Decoder_4To2bits (
     input A, B, C, D,
-    output Y0, Y1
+    output Y0, Y1,
+    output [6:0] seg   // Salida para el display de 7 segmentos
 );
 
     // Cables intermedios para las conexiones intermedias de las compuertas
@@ -15,6 +16,7 @@ module Decoder_4To2bits (
     not U4 (notD, D);
 
     // Implementación de Y0 = (-A*B*-C) + (-A*-C*D) + ABC + ACD + (-A*-B*C*-D) + (A*-B*-C*-D)
+	 
     // Término 1: (-A*B*-C)
     and U5 (andY0_1, notA, B, notC);
     // Término 2: (-A*-C*D)
@@ -32,6 +34,7 @@ module Decoder_4To2bits (
     or U11 (Y0, andY0_1, andY0_2, andY0_3, andY0_4, andY0_5, andY0_6);
 
     // Implementación de Y1 = (B*D) + (-B*-D)
+	 
     // Término 1: (B*D)
     and U12 (andY1_1, B, D);
     // Término 2: (-B*-D)
@@ -39,5 +42,11 @@ module Decoder_4To2bits (
 
     // OR para Y1
     or U14 (Y1, andY1_1, andY1_2);
+
+    // Instancia del módulo bcd_to_7seg_2bits
+    bcd_to_7seg_2bits U15 (
+        .bcd({Y0, Y1}),  // Se conectan Y0 y Y1 como entrada al módulo de 7 segmentos
+        .seg(seg)        // Salida para los 7 segmentos
+    );
 
 endmodule

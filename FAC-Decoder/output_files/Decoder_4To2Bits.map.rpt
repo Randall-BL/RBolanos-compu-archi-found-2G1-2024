@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Decoder_4To2Bits
-Fri Sep 27 14:08:34 2024
+Fri Sep 27 15:05:46 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Fri Sep 27 14:08:34 2024       ;
+; Analysis & Elaboration Status ; Successful - Fri Sep 27 15:05:46 2024       ;
 ; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                 ; Decoder_4To2Bits                            ;
 ; Top-level Entity Name         ; Decoder_4To2bits                            ;
@@ -161,19 +161,22 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Sep 27 14:08:24 2024
+    Info: Processing started: Fri Sep 27 15:05:37 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Decoder_4To2Bits -c Decoder_4To2Bits --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file decoder_4to2bits.sv
-    Info (12023): Found entity 1: Decoder_4To2bits File: C:/Users/tenor/OneDrive/Documentos/FAC-Decoder/Decoder_4To2bits.sv Line: 1
+    Info (12023): Found entity 1: Decoder_4To2bits File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/Decoder_4To2bits.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tb_decoder_4to2bits.sv
-    Info (12023): Found entity 1: tb_Decoder_4To2bits File: C:/Users/tenor/OneDrive/Documentos/FAC-Decoder/tb_Decoder_4To2bits.sv Line: 1
+    Info (12023): Found entity 1: tb_Decoder_4To2bits File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/tb_Decoder_4To2bits.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file bcd_to_7seg_2bits.sv
+    Info (12023): Found entity 1: bcd_to_7seg_2bits File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/bcd_to_7seg_2bits.sv Line: 1
 Info (12127): Elaborating entity "Decoder_4To2bits" for the top level hierarchy
+Info (12128): Elaborating entity "bcd_to_7seg_2bits" for hierarchy "bcd_to_7seg_2bits:U15" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/Decoder_4To2bits.sv Line: 50
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4764 megabytes
-    Info: Processing ended: Fri Sep 27 14:08:34 2024
-    Info: Elapsed time: 00:00:10
+    Info: Peak virtual memory: 4761 megabytes
+    Info: Processing ended: Fri Sep 27 15:05:46 2024
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:15
 
 
