@@ -8,58 +8,84 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/tenor/OneDrive/Documentos/FAC-Decoder/simulation/modelsim
-vDecoder_4To2bits
+Z0 dC:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/simulation/modelsim
+vbcd_to_7seg_2bits
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-!s110 1727467790
+Z2 !s110 1727806213
 !i10b 1
-!s100 ?cz;DZ29Kzjm5M6[8OA6d2
-Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-Io8zY_N:C0jQSjiCMO2OMS1
-Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s100 c`76bHG]jDH8<TQm3V[[E2
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IUdb:;AST_IE1H0YM=Yd7D0
+Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1727467575
-8C:/Users/tenor/OneDrive/Documentos/FAC-Decoder/Decoder_4To2bits.sv
-FC:/Users/tenor/OneDrive/Documentos/FAC-Decoder/Decoder_4To2bits.sv
-!i122 0
-L0 1 43
-Z4 OV;L;2020.1;71
+w1727470966
+8C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/bcd_to_7seg_2bits.sv
+FC:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/bcd_to_7seg_2bits.sv
+!i122 1
+L0 1 16
+Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1727467790.000000
-!s107 C:/Users/tenor/OneDrive/Documentos/FAC-Decoder/Decoder_4To2bits.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/FAC-Decoder|C:/Users/tenor/OneDrive/Documentos/FAC-Decoder/Decoder_4To2bits.sv|
+Z6 !s108 1727806213.000000
+!s107 C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/bcd_to_7seg_2bits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder|C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/bcd_to_7seg_2bits.sv|
 !i113 1
-Z5 o-sv -work work
-Z6 !s92 -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/FAC-Decoder
-Z7 tCvgOpt 0
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder
+Z9 tCvgOpt 0
+vDecoder_4To2bits
+R1
+!s110 1727806212
+!i10b 1
+!s100 OeIe>VK04L=ZEZlWT9Rmj0
+R3
+IF@862<9L3V<>DcbDm98nn0
+R4
+S1
+R0
+w1727471093
+8C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/Decoder_4To2bits.sv
+FC:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/Decoder_4To2bits.sv
+!i122 0
+L0 1 52
+R5
+r1
+!s85 0
+31
+!s108 1727806212.000000
+!s107 C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/Decoder_4To2bits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder|C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/Decoder_4To2bits.sv|
+!i113 1
+R7
+R8
+R9
 n@decoder_4@to2bits
 vtb_Decoder_4To2bits
 R1
-!s110 1727467791
+R2
 !i10b 1
 !s100 hF<akCb^[I9bz7Rh]R;=l2
-R2
-IKmgoI0WcHgYBSHI<<]KZj3
 R3
+IlWA]Ro61Q3J=4;W7QPOWO1
+R4
 S1
 R0
 w1727467653
-8C:/Users/tenor/OneDrive/Documentos/FAC-Decoder/tb_Decoder_4To2bits.sv
-FC:/Users/tenor/OneDrive/Documentos/FAC-Decoder/tb_Decoder_4To2bits.sv
-!i122 1
+8C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/tb_Decoder_4To2bits.sv
+FC:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/tb_Decoder_4To2bits.sv
+!i122 2
 L0 1 92
-R4
+R5
 r1
 !s85 0
 31
-!s108 1727467791.000000
-!s107 C:/Users/tenor/OneDrive/Documentos/FAC-Decoder/tb_Decoder_4To2bits.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/FAC-Decoder|C:/Users/tenor/OneDrive/Documentos/FAC-Decoder/tb_Decoder_4To2bits.sv|
-!i113 1
-R5
 R6
+!s107 C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/tb_Decoder_4To2bits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder|C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/tb_Decoder_4To2bits.sv|
+!i113 1
 R7
+R8
+R9
 ntb_@decoder_4@to2bits

@@ -10,34 +10,48 @@
 # Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/FAC-Decoder {C:/Users/tenor/OneDrive/Documentos/FAC-Decoder/Decoder_4To2bits.sv}
+# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder {C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/Decoder_4To2bits.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:09:50 on Sep 27,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/FAC-Decoder" C:/Users/tenor/OneDrive/Documentos/FAC-Decoder/Decoder_4To2bits.sv 
+# Start time: 12:10:12 on Oct 01,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder" C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/Decoder_4To2bits.sv 
 # -- Compiling module Decoder_4To2bits
 # 
 # Top level modules:
 # 	Decoder_4To2bits
-# End time: 14:09:50 on Sep 27,2024, Elapsed time: 0:00:00
+# End time: 12:10:12 on Oct 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder {C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/bcd_to_7seg_2bits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:10:13 on Oct 01,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder" C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/bcd_to_7seg_2bits.sv 
+# -- Compiling module bcd_to_7seg_2bits
+# 
+# Top level modules:
+# 	bcd_to_7seg_2bits
+# End time: 12:10:13 on Oct 01,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/FAC-Decoder {C:/Users/tenor/OneDrive/Documentos/FAC-Decoder/tb_Decoder_4To2bits.sv}
+# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder {C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/tb_Decoder_4To2bits.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:09:51 on Sep 27,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/FAC-Decoder" C:/Users/tenor/OneDrive/Documentos/FAC-Decoder/tb_Decoder_4To2bits.sv 
+# Start time: 12:10:13 on Oct 01,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder" C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/tb_Decoder_4To2bits.sv 
 # -- Compiling module tb_Decoder_4To2bits
 # 
 # Top level modules:
 # 	tb_Decoder_4To2bits
-# End time: 14:09:51 on Sep 27,2024, Elapsed time: 0:00:00
+# End time: 12:10:13 on Oct 01,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_Decoder_4To2bits
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_Decoder_4To2bits 
-# Start time: 14:09:51 on Sep 27,2024
+# Start time: 12:10:13 on Oct 01,2024
 # Loading sv_std.std
 # Loading work.tb_Decoder_4To2bits
 # Loading work.Decoder_4To2bits
+# Loading work.bcd_to_7seg_2bits
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_Decoder_4To2bits/dut File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/tb_Decoder_4To2bits.sv Line: 8
+# ** Warning: (vsim-3722) C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/tb_Decoder_4To2bits.sv(8): [TFMPC] - Missing connection for port 'seg'.
 # 
 # add wave *
 # view structure
@@ -61,9 +75,9 @@
 # A = 1, B = 1, C = 0, D = 1 -> Y0 = 0, Y1 = 1
 # A = 1, B = 1, C = 1, D = 0 -> Y0 = 1, Y1 = 0
 # A = 1, B = 1, C = 1, D = 1 -> Y0 = 1, Y1 = 1
-# ** Note: $finish    : C:/Users/tenor/OneDrive/Documentos/FAC-Decoder/tb_Decoder_4To2bits.sv(89)
+# ** Note: $finish    : C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/tb_Decoder_4To2bits.sv(89)
 #    Time: 160 ps  Iteration: 0  Instance: /tb_Decoder_4To2bits
 # 1
-# Break in Module tb_Decoder_4To2bits at C:/Users/tenor/OneDrive/Documentos/FAC-Decoder/tb_Decoder_4To2bits.sv line 89
-# End time: 14:10:40 on Sep 27,2024, Elapsed time: 0:00:49
-# Errors: 0, Warnings: 0
+# Break in Module tb_Decoder_4To2bits at C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC-Decoder/tb_Decoder_4To2bits.sv line 89
+# End time: 12:10:52 on Oct 01,2024, Elapsed time: 0:00:39
+# Errors: 0, Warnings: 2

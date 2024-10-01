@@ -43,10 +43,10 @@ module Decoder_4To2bits (
     // OR para Y1
     or U14 (Y1, andY1_1, andY1_2);
 
-    // Instancia del módulo bcd_to_7seg_2bits
-    bcd_to_7seg_2bits U15 (
-        .bcd({Y0, Y1}),  // Se conectan Y0 y Y1 como entrada al módulo de 7 segmentos
-        .seg(seg)        // Salida para los 7 segmentos
-    );
+    //// Instancia del módulo bcd_to_7seg_2bits
+    //bcd_to_7seg_2bits U15 (
+    //    .bcd({Y0, Y1}),  // Se conectan Y0 y Y1 como entrada al módulo de 7 segmentos
+    //    .seg(seg)        // Salida para los 7 segmentos
+    //);
 
 endmodule

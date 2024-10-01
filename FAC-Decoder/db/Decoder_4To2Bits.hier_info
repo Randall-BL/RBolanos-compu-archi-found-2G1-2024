@@ -1,4 +1,38 @@
-|Decoder_4To2bits
+|TopModule
+A => A.IN1
+B => B.IN1
+C => C.IN1
+D => D.IN1
+C2 => C2.IN1
+D2 => D2.IN1
+clk => Y1_reg.CLK
+clk => Y0_reg.CLK
+reset => Y1_reg.ACLR
+reset => Y0_reg.ACLR
+seg[0] << bcd_to_7seg_2bits:U3.seg
+seg[1] << bcd_to_7seg_2bits:U3.seg
+seg[2] << bcd_to_7seg_2bits:U3.seg
+seg[3] << bcd_to_7seg_2bits:U3.seg
+seg[4] << bcd_to_7seg_2bits:U3.seg
+seg[5] << bcd_to_7seg_2bits:U3.seg
+seg[6] << bcd_to_7seg_2bits:U3.seg
+
+
+|TopModule|FirtsDecoder_4to2bits:U1
+A => U3.IN0
+A => U7.IN1
+B => U3.IN1
+B => U7.IN2
+C => U3.IN2
+C => U5.IN0
+C => U4.IN0
+D => U5.IN1
+D => U4.IN1
+Y0 <= U3.DB_MAX_OUTPUT_PORT_TYPE
+Y1 <= U7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|Decoder_4To2bits:U2
 A => U7.IN0
 A => U8.IN0
 A => U10.IN0
@@ -23,18 +57,18 @@ D => U12.IN1
 D => U9.IN3
 D => U10.IN3
 D => U13.IN1
-Y0 <= Y0.DB_MAX_OUTPUT_PORT_TYPE
-Y1 <= Y1.DB_MAX_OUTPUT_PORT_TYPE
-seg[0] <= bcd_to_7seg_2bits:U15.seg
-seg[1] <= bcd_to_7seg_2bits:U15.seg
-seg[2] <= bcd_to_7seg_2bits:U15.seg
-seg[3] <= bcd_to_7seg_2bits:U15.seg
-seg[4] <= bcd_to_7seg_2bits:U15.seg
-seg[5] <= bcd_to_7seg_2bits:U15.seg
-seg[6] <= bcd_to_7seg_2bits:U15.seg
+Y0 <= U11.DB_MAX_OUTPUT_PORT_TYPE
+Y1 <= U14.DB_MAX_OUTPUT_PORT_TYPE
+seg[0] <= <GND>
+seg[1] <= <GND>
+seg[2] <= <GND>
+seg[3] <= <GND>
+seg[4] <= <GND>
+seg[5] <= <GND>
+seg[6] <= <GND>
 
 
-|Decoder_4To2bits|bcd_to_7seg_2bits:U15
+|TopModule|bcd_to_7seg_2bits:U3
 bcd[0] => Decoder0.IN1
 bcd[0] => seg[4].DATAIN
 bcd[1] => Decoder0.IN0
