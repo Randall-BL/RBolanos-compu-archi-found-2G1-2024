@@ -9,13 +9,13 @@ clk => Y1_reg.CLK
 clk => Y0_reg.CLK
 reset => Y1_reg.ACLR
 reset => Y0_reg.ACLR
-seg[0] << bcd_to_7seg_2bits:U3.seg
-seg[1] << bcd_to_7seg_2bits:U3.seg
-seg[2] << bcd_to_7seg_2bits:U3.seg
-seg[3] << bcd_to_7seg_2bits:U3.seg
-seg[4] << bcd_to_7seg_2bits:U3.seg
-seg[5] << bcd_to_7seg_2bits:U3.seg
-seg[6] << bcd_to_7seg_2bits:U3.seg
+seg[0] <= bcd_to_7seg_2bits:U15.seg
+seg[1] <= bcd_to_7seg_2bits:U15.seg
+seg[2] <= bcd_to_7seg_2bits:U15.seg
+seg[3] <= bcd_to_7seg_2bits:U15.seg
+seg[4] <= bcd_to_7seg_2bits:U15.seg
+seg[5] <= bcd_to_7seg_2bits:U15.seg
+seg[6] <= bcd_to_7seg_2bits:U15.seg
 
 
 |TopModule|FirtsDecoder_4to2bits:U1
@@ -68,7 +68,7 @@ seg[5] <= <GND>
 seg[6] <= <GND>
 
 
-|TopModule|bcd_to_7seg_2bits:U3
+|TopModule|bcd_to_7seg_2bits:U15
 bcd[0] => Decoder0.IN1
 bcd[0] => seg[4].DATAIN
 bcd[1] => Decoder0.IN0
