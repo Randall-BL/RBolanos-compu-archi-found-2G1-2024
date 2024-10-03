@@ -9,13 +9,13 @@ clk => Y1_reg.CLK
 clk => Y0_reg.CLK
 reset => Y1_reg.ACLR
 reset => Y0_reg.ACLR
-seg[0] <= bcd_to_7seg_2bits:U15.seg
-seg[1] <= bcd_to_7seg_2bits:U15.seg
-seg[2] <= bcd_to_7seg_2bits:U15.seg
-seg[3] <= bcd_to_7seg_2bits:U15.seg
-seg[4] <= bcd_to_7seg_2bits:U15.seg
-seg[5] <= bcd_to_7seg_2bits:U15.seg
-seg[6] <= bcd_to_7seg_2bits:U15.seg
+seg[0] << bcd_to_7seg_2bits:U15.seg
+seg[1] << bcd_to_7seg_2bits:U15.seg
+seg[2] << bcd_to_7seg_2bits:U15.seg
+seg[3] << bcd_to_7seg_2bits:U15.seg
+seg[4] << bcd_to_7seg_2bits:U15.seg
+seg[5] << bcd_to_7seg_2bits:U15.seg
+seg[6] << bcd_to_7seg_2bits:U15.seg
 
 
 |TopModule|FirtsDecoder_4to2bits:U1
@@ -59,13 +59,6 @@ D => U10.IN3
 D => U13.IN1
 Y0 <= U11.DB_MAX_OUTPUT_PORT_TYPE
 Y1 <= U14.DB_MAX_OUTPUT_PORT_TYPE
-seg[0] <= <GND>
-seg[1] <= <GND>
-seg[2] <= <GND>
-seg[3] <= <GND>
-seg[4] <= <GND>
-seg[5] <= <GND>
-seg[6] <= <GND>
 
 
 |TopModule|bcd_to_7seg_2bits:U15
