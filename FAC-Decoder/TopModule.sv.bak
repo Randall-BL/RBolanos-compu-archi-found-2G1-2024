@@ -1,0 +1,31 @@
+module TopModule (
+    input A, B, C, D,   // Entradas para el primer decodificador
+    input C2, D2,       // Entradas adicionales para el segundo decodificador
+    output [6:0] seg    // Salida para el display de 7 segmentos
+);
+
+    // Señales intermedias para las salidas del primer decodificador
+    wire Y0_first, Y1_first;
+
+    // Instancia del primer decodificador
+    FirtsDecoder_4to2bits U1 (
+        .A(A),
+        .B(B),
+        .C(C),
+        .D(D),
+        .Y0(Y0_first),  // Y0 del primer decodificador
+        .Y1(Y1_first)   // Y1 del primer decodificador
+    );
+
+    // Instancia del segundo decodificador, usando las salidas del primer decodificador como entradas
+    Decoder_4To2bits U2 (
+        .A(Y0_first),  // Conectamos Y0 del primer decodificador como A del segundo
+        .B(Y1_first),  // Conectamos Y1 del primer decodificador como B del segundo
+        .C(C2),        // C y D pueden ser otras señales o entradas adicionales
+        .D(D2),
+        .Y0(),         // Estas salidas se pueden dejar desconectadas si no las necesitas
+        .Y1(),
+        .seg(seg)      // Salida para el display de 7 segmentos
+    );
+
+endmodule
