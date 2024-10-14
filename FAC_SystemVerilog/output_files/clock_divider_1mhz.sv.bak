@@ -1,0 +1,17 @@
+module clock_divider_1mhz(
+    input wire clk_in,       // Reloj de entrada (50 MHz)
+    output reg clk_out       // Reloj de salida (1 MHz)
+);
+
+    // Calculamos cuántos ciclos de 50 MHz necesitamos para generar un ciclo de 1 MHz
+    // 50 MHz / 1 MHz = 50 ciclos.
+    reg [5:0] count = 0;     // Contador de 6 bits para contar hasta 50
+
+    always @(posedge clk_in) begin
+        count <= count + 1;
+        if (count == 25) begin
+            clk_out <= ~clk_out;  // Alternar la salida
+            count <= 0;           // Reiniciar el contador
+        end
+    end
+endmodule

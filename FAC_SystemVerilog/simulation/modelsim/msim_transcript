@@ -1,0 +1,95 @@
+# Reading pref.tcl
+# do UART_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/FAC_tarea {C:/Users/tenor/OneDrive/Documentos/FAC_tarea/uart_rx.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:05:03 on Oct 14,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_tarea" C:/Users/tenor/OneDrive/Documentos/FAC_tarea/uart_rx.sv 
+# -- Compiling module uart_rx
+# 
+# Top level modules:
+# 	uart_rx
+# End time: 13:05:03 on Oct 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/FAC_tarea {C:/Users/tenor/OneDrive/Documentos/FAC_tarea/fpga_top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:05:04 on Oct 14,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_tarea" C:/Users/tenor/OneDrive/Documentos/FAC_tarea/fpga_top.sv 
+# -- Compiling module fpga_top
+# 
+# Top level modules:
+# 	fpga_top
+# End time: 13:05:04 on Oct 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/FAC_tarea/output_files {C:/Users/tenor/OneDrive/Documentos/FAC_tarea/output_files/uart_tx.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:05:04 on Oct 14,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_tarea/output_files" C:/Users/tenor/OneDrive/Documentos/FAC_tarea/output_files/uart_tx.sv 
+# -- Compiling module uart_tx
+# 
+# Top level modules:
+# 	uart_tx
+# End time: 13:05:04 on Oct 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/FAC_tarea {C:/Users/tenor/OneDrive/Documentos/FAC_tarea/tb_fpga_top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:05:04 on Oct 14,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_tarea" C:/Users/tenor/OneDrive/Documentos/FAC_tarea/tb_fpga_top.sv 
+# -- Compiling module tb_fpga_top
+# 
+# Top level modules:
+# 	tb_fpga_top
+# End time: 13:05:04 on Oct 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_fpga_top
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_fpga_top 
+# Start time: 13:05:04 on Oct 14,2024
+# Loading sv_std.std
+# Loading work.tb_fpga_top
+# Loading work.fpga_top
+# Loading work.uart_rx
+# Loading work.uart_tx
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Tiempo                    0: LEDs = 0000, TX = 1
+# Simulación de la recepción de '11001100'
+# Datos recibidos: 11001100, LEDs actualizados a: 0000
+# Tiempo            989950000: LEDs = 1100, TX = 1
+# Tiempo           1094130000: LEDs = 1100, TX = 0
+# Tiempo           1198290000: LEDs = 1100, TX = 1
+# Tiempo           1302450000: LEDs = 1100, TX = 0
+# Tiempo           1406610000: LEDs = 1100, TX = 1
+# Tiempo           1614930000: LEDs = 1100, TX = 0
+# Tiempo           1823250000: LEDs = 1100, TX = 1
+# Simulación de la recepción de '10101010'
+# Datos recibidos: 10101010, LEDs actualizados a: 1100
+# Tiempo           3173290000: LEDs = 1010, TX = 1
+# Tiempo           3277470000: LEDs = 1010, TX = 0
+# Tiempo           3381630000: LEDs = 1010, TX = 1
+# Tiempo           3589950000: LEDs = 1010, TX = 0
+# Tiempo           3694110000: LEDs = 1010, TX = 1
+# Tiempo           3798270000: LEDs = 1010, TX = 0
+# Tiempo           3902430000: LEDs = 1010, TX = 1
+# Tiempo           4006590000: LEDs = 1010, TX = 0
+# Tiempo           4110750000: LEDs = 1010, TX = 1
+# ** Note: $stop    : C:/Users/tenor/OneDrive/Documentos/FAC_tarea/tb_fpga_top.sv(52)
+#    Time: 4366880 ns  Iteration: 0  Instance: /tb_fpga_top
+# Break in Module tb_fpga_top at C:/Users/tenor/OneDrive/Documentos/FAC_tarea/tb_fpga_top.sv line 52
+# End time: 13:05:26 on Oct 14,2024, Elapsed time: 0:00:22
+# Errors: 0, Warnings: 0
