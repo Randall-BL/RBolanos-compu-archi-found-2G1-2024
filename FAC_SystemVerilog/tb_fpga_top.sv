@@ -39,6 +39,9 @@ module tb_fpga_top;
         // Esperar a que se procese y envíe de vuelta el dato
         #1041670;  // Tiempo necesario para enviar/recibir un byte completo a 9600 baudios
 
+        // Dar más tiempo para la actualización de los LEDs y procesamiento
+        #2000000;
+
         // Simular la recepción de datos UART (ejemplo: 8 bits "10101010")
         #100000;
         $display("Simulación de la recepción de '10101010'");
@@ -46,6 +49,9 @@ module tb_fpga_top;
 
         // Esperar a que se procese y envíe de vuelta el dato
         #1041670;
+
+        // Dar más tiempo para la actualización de los LEDs y procesamiento
+        #2000000;
 
         // Finalizar la simulación
         #100000;
@@ -78,4 +84,3 @@ module tb_fpga_top;
     end
 
 endmodule
-

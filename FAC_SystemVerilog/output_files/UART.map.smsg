@@ -1,1 +1,1 @@
-Info (10281): Verilog HDL Declaration information at uart_rx.sv(5): object "data" differs only in case from object "DATA" in the same scope File: C:/Users/tenor/OneDrive/Documentos/FAC_tarea/uart_rx.sv Line: 5
+Info (10281): Verilog HDL Declaration information at uart_rx.sv(5): object "data" differs only in case from object "DATA" in the same scope File: C:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/uart_rx.sv Line: 5

@@ -2,11 +2,11 @@
 clk => clk.IN2
 rst_n => rst_n.IN2
 rx => rx.IN1
-leds[0] << leds[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-leds[1] << leds[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-leds[2] << leds[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-leds[3] << leds[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-tx << uart_tx:uart_transmitter.tx
+leds[0] <= leds[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+leds[1] <= leds[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+leds[2] <= leds[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+leds[3] <= leds[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tx <= uart_tx:uart_transmitter.tx
 
 
 |fpga_top|uart_rx:uart_receiver

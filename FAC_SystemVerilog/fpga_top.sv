@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module fpga_top (
     input wire clk,          // Reloj del sistema
     input wire rst_n,        // Reset activo en bajo
@@ -43,14 +45,17 @@ module fpga_top (
             valid_rx_d <= 0;            // Inicializar registro de valid
         end else begin
             valid_rx_d <= valid_rx;     // Almacenar la señal valid anterior
+            
+            // Si se detecta un flanco ascendente en valid_rx (nuevo dato recibido)
             if (valid_rx && !valid_rx_d) begin
-                // Actualizar LEDs con los datos recibidos solo cuando valid cambia de 0 a 1
-                leds <= uart_data_rx;
-                $display("Datos recibidos: %b, LEDs actualizados a: %b", uart_data_full_rx, leds);
+                leds <= uart_data_rx;  // Actualizar LEDs con los datos recibidos
                 
-                // Preparar el dato para enviar al Arduino
+                // Posponer el print para asegurar que los LEDs hayan sido actualizados
+                #1 $display("Datos recibidos: %b, LEDs actualizados a: %b", uart_data_full_rx, leds);
+                
+                // Preparar los datos a enviar al Arduino
                 data_to_send <= uart_data_full_rx + 8'b1;  // Enviar un dato modificado
-                send <= 1;                                // Activar señal de transmisión
+                send <= 1;  // Activar señal de transmisión
             end else begin
                 send <= 0;  // Desactivar transmisión después de enviar el dato
             end

@@ -67,7 +67,6 @@ set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH tb_fpga_top -se
 set_global_assignment -name EDA_TEST_BENCH_NAME tb_fpga_top -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_fpga_top
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_fpga_top -section_id tb_fpga_top
-set_global_assignment -name EDA_TEST_BENCH_FILE tb_fpga_top.sv -section_id tb_fpga_top
 set_location_assignment PIN_W15 -to rx
 set_location_assignment PIN_AB30 -to rst_n
 set_location_assignment PIN_AA24 -to leds[0]
@@ -77,4 +76,5 @@ set_location_assignment PIN_AD24 -to leds[3]
 set_location_assignment PIN_AF14 -to clk
 set_global_assignment -name SYSTEMVERILOG_FILE output_files/uart_tx.sv
 set_location_assignment PIN_AK2 -to tx
+set_global_assignment -name EDA_TEST_BENCH_FILE tb_fpga_top.sv -section_id tb_fpga_top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
