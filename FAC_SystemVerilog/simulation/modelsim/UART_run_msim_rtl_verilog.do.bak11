@@ -7,7 +7,6 @@ vmap work rtl_work
 
 vlog -sv -work work +incdir+C:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog {C:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/uart_rx.sv}
 vlog -sv -work work +incdir+C:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog {C:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv}
-vlog -sv -work work +incdir+C:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files {C:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files/uart_tx.sv}
 
 vlog -sv -work work +incdir+C:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog {C:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/tb_fpga_top.sv}
 

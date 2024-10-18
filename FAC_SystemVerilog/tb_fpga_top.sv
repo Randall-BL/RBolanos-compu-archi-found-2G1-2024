@@ -2,85 +2,111 @@
 
 module tb_fpga_top;
 
-    reg clk;             // Señal de reloj
-    reg rst_n;           // Señal de reset (activo en bajo)
-    reg rx;              // Entrada RX desde el Arduino (simulada)
-    wire tx;             // Salida TX hacia el Arduino (simulada)
-    wire [3:0] leds;     // LEDs de salida
+    // Parámetros para la simulación
+    parameter CLK_FREQ = 50000000;  // Frecuencia de reloj (50 MHz)
+    parameter BAUD_RATE = 9600;     // Velocidad de UART
+    localparam CLK_PERIOD = 1000000000 / CLK_FREQ;  // Periodo de reloj en nanosegundos
+    localparam BAUD_PERIOD = 1000000000 / BAUD_RATE; // Periodo de baudios en nanosegundos
 
-    // Instancia del módulo FPGA completo
+    // Señales
+    reg clk;
+    reg rst_n;
+    reg rx;
+    wire [1:0] leds;  // Señal para los LEDs
+
+    // Instancia del módulo fpga_top
     fpga_top uut (
         .clk(clk),
         .rst_n(rst_n),
         .rx(rx),
-        .tx(tx),
         .leds(leds)
     );
 
-    // Generador de reloj (50 MHz)
-    always #10 clk = ~clk;  // Período de 20 ns (50 MHz)
-
-    // Proceso de simulación
+    // Generación del reloj
     initial begin
-        // Inicialización
         clk = 0;
-        rst_n = 0;
-        rx = 1; // Inactivo (UART high level cuando no se está transmitiendo)
-        
-        // Reset del sistema
-        #100;
-        rst_n = 1;
-
-        // Simular la recepción de datos UART (ejemplo: 8 bits "11001100")
-        #100;
-        $display("Simulación de la recepción de '11001100'");
-        uart_receive(8'b11001100);  // Simular recepción de "11001100"
-
-        // Esperar a que se procese y envíe de vuelta el dato
-        #1041670;  // Tiempo necesario para enviar/recibir un byte completo a 9600 baudios
-
-        // Dar más tiempo para la actualización de los LEDs y procesamiento
-        #2000000;
-
-        // Simular la recepción de datos UART (ejemplo: 8 bits "10101010")
-        #100000;
-        $display("Simulación de la recepción de '10101010'");
-        uart_receive(8'b10101010);  // Simular recepción de "10101010"
-
-        // Esperar a que se procese y envíe de vuelta el dato
-        #1041670;
-
-        // Dar más tiempo para la actualización de los LEDs y procesamiento
-        #2000000;
-
-        // Finalizar la simulación
-        #100000;
-        $stop;
+        forever #(CLK_PERIOD / 2) clk = ~clk;  // Genera un reloj de 50 MHz
     end
 
-    // Tarea para simular la recepción UART (9600 baudios, 8 bits de datos, sin paridad, 1 bit de parada)
-    task uart_receive(input [7:0] data);
+    // Inicialización de señales
+    initial begin
+        rst_n = 1;    // Comienza en 1 (reset inactivo)
+        #50;
+        rst_n = 0;    // Activa el reset
+        #200;         // Mantiene el reset activo por 200 ns
+        rst_n = 1;    // Desactiva el reset
+        rx = 1;       // Línea RX en reposo (nivel alto)
+    end
+
+    // Tarea para enviar un dato por UART
+    task send_uart_data;
+        input [1:0] data_in;
         integer i;
         begin
-            // Simular el bit de inicio (start bit)
+            // Enviar bit de inicio (start bit)
             rx = 0;
-            #(104167);  // Tiempo de 1 bit a 9600 baudios (104.167 µs)
+            #(BAUD_PERIOD);
 
-            // Enviar los 8 bits de datos (LSB primero)
-            for (i = 0; i < 8; i = i + 1) begin
-                rx = data[i];
-                #(104167);  // Tiempo de 1 bit a 9600 baudios
+            // Enviar bits de datos (LSB primero)
+            for (i = 0; i < 2; i = i + 1) begin
+                rx = data_in[i];
+                #(BAUD_PERIOD);
             end
 
-            // Simular el bit de parada (stop bit)
+            // Enviar bit de parada (stop bit)
             rx = 1;
-            #(104167);  // Tiempo de 1 bit a 9600 baudios
+            #(BAUD_PERIOD);
+
+            // Esperar un tiempo antes de enviar el siguiente dato
+            #(BAUD_PERIOD * 2);
+
+            // Agregar un mensaje entre las recepciones de datos
+            $display("Tiempo %t ns: Estado de LEDs entre datos: LEDs=%b", $time, leds);
         end
     endtask
 
-    // Monitor para observar los LEDs y la señal TX
+    // Proceso de simulación
     initial begin
-        $monitor("Tiempo %t: LEDs = %b, TX = %b", $time, leds, tx);
+        // Esperar un tiempo antes de comenzar la transmisión
+        #1000;
+
+        // Enviar datos de prueba
+        $display("Tiempo %t ns: Iniciando transmisión de datos", $time);
+        send_uart_data(2'b11);  // Enviar '11' (ambos LEDs encendidos)
+        send_uart_data(2'b01);  // Enviar '01' (LED0 apagado, LED1 encendido)
+        send_uart_data(2'b10);  // Enviar '10' (LED0 encendido, LED1 apagado)
+        send_uart_data(2'b00);  // Enviar '00' (ambos LEDs apagados)
+
+        // Finalizar la simulación después de un tiempo
+        #(BAUD_PERIOD * 20);
+        $stop;
+    end
+
+    // Monitoreo de señales en momentos clave
+    always @(posedge clk) begin
+        // Detectar cuando 'valid' se activa
+        if (uut.uart_receiver.valid) begin
+            $display("Tiempo %t ns: Datos recibidos: Data=%b, Valid=%b, LEDs=%b", $time, uut.uart_receiver.data, uut.uart_receiver.valid, leds);
+        end
+    end
+
+    // Monitoreo de eventos de recepción
+    always @(negedge rx) begin
+        $display("Tiempo %t ns: Inicio de recepción (Start bit detectado)", $time);
+    end
+
+    always @(posedge rx) begin
+        if (rx === 1'b1) begin
+            $display("Tiempo %t ns: Fin de recepción (Stop bit detectado)", $time);
+        end
+    end
+
+    // Monitoreo periódico del estado de los LEDs
+    initial begin
+        forever begin
+            #(BAUD_PERIOD * 5);
+            $display("Tiempo %t ns: Estado actual de LEDs: LEDs=%b", $time, leds);
+        end
     end
 
 endmodule

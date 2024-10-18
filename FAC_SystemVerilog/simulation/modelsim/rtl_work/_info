@@ -11,24 +11,24 @@ cModel Technology
 Z0 dC:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/simulation/modelsim
 vfpga_top
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1728990390
+Z2 !s110 1729253381
 !i10b 1
-!s100 02P;V?KT6m7C]InF8n>5@3
+!s100 @N1WzB]Q;l>A3bAPV1RIH1
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IK]Q[j;VDbhOO9U>]LM]RO2
+IE0acU:Z3dIK9KWDlGj4HY1
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1728990378
+w1729253258
 8C:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv
 FC:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv
 !i122 1
-L0 3 63
+L0 1 48
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1728990390.000000
+Z6 !s108 1729253381.000000
 !s107 C:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog|C:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv|
 !i113 1
@@ -39,17 +39,17 @@ vtb_fpga_top
 R1
 R2
 !i10b 1
-!s100 KPh5DgA>mbF;?;F[1G]bm1
+!s100 b=4okl7X9F>?c^iJYHbTV0
 R3
-IDF@fP_RnJUOVIQTK[gb[i0
+IO`<Hb;^A;1egCaP?;>C0f2
 R4
 S1
 R0
-w1728989988
+w1729253308
 8C:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/tb_fpga_top.sv
 FC:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/tb_fpga_top.sv
-!i122 3
-L0 3 84
+!i122 2
+L0 3 110
 R5
 r1
 !s85 0
@@ -65,17 +65,17 @@ vuart_rx
 R1
 R2
 !i10b 1
-!s100 ^7N84nZ2EXSVEB?dDMYA50
+!s100 MU?2KGh>Zd4AUCd60?93D1
 R3
-I]TR_NigaIZ@PjoeUXE^JJ3
+IJSihabAMjcROezF;3bIX31
 R4
 S1
 R0
-w1728986947
+w1729252775
 8C:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/uart_rx.sv
 FC:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/uart_rx.sv
 !i122 0
-L0 1 77
+L0 1 123
 R5
 r1
 !s85 0
@@ -86,30 +86,4 @@ R6
 !i113 1
 R7
 R8
-R9
-vuart_tx
-R1
-R2
-!i10b 1
-!s100 P0e_DSoPA9=NXl]ahz[dO3
-R3
-I[DM4_gfH<J:=D?3gX8gWk2
-R4
-S1
-R0
-w1728986999
-8C:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files/uart_tx.sv
-FC:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files/uart_tx.sv
-!i122 2
-L0 1 51
-R5
-r1
-!s85 0
-31
-R6
-!s107 C:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files/uart_tx.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files|C:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files/uart_tx.sv|
-!i113 1
-R7
-!s92 -sv -work work +incdir+C:/Users/YITAN/OneDrive/Escritorio/ProyectoGrupalFAC/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files
 R9
