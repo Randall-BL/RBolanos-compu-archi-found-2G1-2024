@@ -1,9 +1,10 @@
 |fpga_top
-clk => clk.IN1
-rst_n => rst_n.IN1
+clk => clk.IN2
+rst_n => rst_n.IN2
 rx => rx.IN1
-leds[0] << leds[0].DB_MAX_OUTPUT_PORT_TYPE
-leds[1] << leds[1].DB_MAX_OUTPUT_PORT_TYPE
+tx <= uart_tx:uart_transmitter.tx
+leds[0] <= leds[0].DB_MAX_OUTPUT_PORT_TYPE
+leds[1] <= leds[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |fpga_top|uart_rx:uart_receiver
@@ -66,5 +67,54 @@ baud_count[15] <= baud_count_reg.DB_MAX_OUTPUT_PORT_TYPE
 bit_count <= bit_count.DB_MAX_OUTPUT_PORT_TYPE
 shift_reg[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 shift_reg[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fpga_top|uart_tx:uart_transmitter
+clk => ~NO_FANOUT~
+rst_n => baud_count_reg[0].IN1
+rst_n => baud_count_reg[1].IN1
+rst_n => baud_count_reg[2].IN1
+rst_n => baud_count_reg[3].IN1
+rst_n => baud_count_reg[4].IN1
+rst_n => baud_count_reg[5].IN1
+rst_n => baud_count_reg[6].IN1
+rst_n => baud_count_reg[7].IN1
+rst_n => baud_count_reg[8].IN1
+rst_n => baud_count_reg[9].IN1
+rst_n => baud_count_reg[10].IN1
+rst_n => baud_count_reg[11].IN1
+rst_n => baud_count_reg[12].IN1
+rst_n => baud_count_reg[13].IN1
+rst_n => baud_count_reg[14].IN1
+rst_n => baud_count_reg[15].IN1
+rst_n => bit_count_reg[0].IN1
+rst_n => bit_count_reg[1].IN1
+rst_n => bit_count_reg[2].IN1
+rst_n => bit_count_reg[3].IN1
+rst_n => shift_reg[0].IN1
+rst_n => shift_reg[1].IN1
+rst_n => shift_reg[2].IN1
+rst_n => shift_reg[3].IN1
+rst_n => shift_reg[4].IN1
+rst_n => shift_reg[5].IN1
+rst_n => shift_reg[6].IN1
+rst_n => shift_reg[7].IN1
+rst_n => shift_reg[8].IN1
+rst_n => shift_reg[9].IN1
+rst_n => transmitting_reg.IN1
+rst_n => tx_reg.IN1
+rst_n => busy_reg.IN1
+rst_n => tx_reg.IN1
+data_in[0] => shift_reg_next[1].DATAB
+data_in[1] => shift_reg_next[2].DATAB
+data_in[2] => shift_reg_next[3].DATAB
+data_in[3] => shift_reg_next[4].DATAB
+data_in[4] => shift_reg_next[5].DATAB
+data_in[5] => shift_reg_next[6].DATAB
+data_in[6] => shift_reg_next[7].DATAB
+data_in[7] => shift_reg_next[8].DATAB
+send => baud_count_next.IN0
+tx <= tx.DB_MAX_OUTPUT_PORT_TYPE
+busy <= busy_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
