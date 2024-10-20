@@ -12,58 +12,56 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog {C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/uart_rx.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:17:27 on Oct 20,2024
+# Start time: 05:10:25 on Oct 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog" C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/uart_rx.sv 
 # -- Compiling module uart_rx
 # 
 # Top level modules:
 # 	uart_rx
-# End time: 02:17:28 on Oct 20,2024, Elapsed time: 0:00:01
+# End time: 05:10:25 on Oct 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog {C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:17:28 on Oct 20,2024
+# Start time: 05:10:25 on Oct 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog" C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv 
 # -- Compiling module fpga_top
 # 
 # Top level modules:
 # 	fpga_top
-# End time: 02:17:28 on Oct 20,2024, Elapsed time: 0:00:00
+# End time: 05:10:25 on Oct 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files {C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files/uart_tx.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:17:28 on Oct 20,2024
+# Start time: 05:10:26 on Oct 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files" C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files/uart_tx.sv 
 # -- Compiling module uart_tx
 # 
 # Top level modules:
 # 	uart_tx
-# End time: 02:17:28 on Oct 20,2024, Elapsed time: 0:00:00
+# End time: 05:10:26 on Oct 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog {C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/tb_fpga_top.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:17:28 on Oct 20,2024
+# Start time: 05:10:26 on Oct 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog" C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/tb_fpga_top.sv 
 # -- Compiling module tb_fpga_top
 # 
 # Top level modules:
 # 	tb_fpga_top
-# End time: 02:17:28 on Oct 20,2024, Elapsed time: 0:00:00
+# End time: 05:10:26 on Oct 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_fpga_top
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_fpga_top 
-# Start time: 02:17:29 on Oct 20,2024
+# Start time: 05:10:26 on Oct 20,2024
 # Loading sv_std.std
 # Loading work.tb_fpga_top
 # Loading work.fpga_top
 # Loading work.uart_rx
 # Loading work.uart_tx
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uart_rx_inst'.  Expected 12, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_fpga_top/uut/uart_rx_inst File: C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv Line: 17
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (8) for port 'data'. The port definition is at: C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/uart_rx.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_fpga_top/uut/uart_rx_inst File: C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv Line: 17
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uart_receiver'.  Expected 12, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_fpga_top/uut/uart_receiver File: C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv Line: 17
 # ** Warning: (vsim-3722) C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv(17): [TFMPC] - Missing connection for port 'state_idle'.
 # ** Warning: (vsim-3722) C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv(17): [TFMPC] - Missing connection for port 'state_start'.
 # ** Warning: (vsim-3722) C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv(17): [TFMPC] - Missing connection for port 'state_data'.
@@ -71,6 +69,15 @@
 # ** Warning: (vsim-3722) C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv(17): [TFMPC] - Missing connection for port 'baud_count'.
 # ** Warning: (vsim-3722) C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv(17): [TFMPC] - Missing connection for port 'bit_count'.
 # ** Warning: (vsim-3722) C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv(17): [TFMPC] - Missing connection for port 'shift_reg'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uart_transmitter'.  Expected 13, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_fpga_top/uut/uart_transmitter File: C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv Line: 26
+# ** Warning: (vsim-3722) C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv(26): [TFMPC] - Missing connection for port 'state_idle'.
+# ** Warning: (vsim-3722) C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv(26): [TFMPC] - Missing connection for port 'state_start'.
+# ** Warning: (vsim-3722) C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv(26): [TFMPC] - Missing connection for port 'state_data'.
+# ** Warning: (vsim-3722) C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv(26): [TFMPC] - Missing connection for port 'state_stop'.
+# ** Warning: (vsim-3722) C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv(26): [TFMPC] - Missing connection for port 'baud_count'.
+# ** Warning: (vsim-3722) C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv(26): [TFMPC] - Missing connection for port 'bit_count'.
+# ** Warning: (vsim-3722) C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv(26): [TFMPC] - Missing connection for port 'shift_reg'.
 # 
 # add wave *
 # view structure
@@ -78,11 +85,26 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# Time=0: data_out=00, valid=0, busy=0
-# Sent byte: 00000001
-# Time=130000: data_out=00, valid=0, busy=1
-# Time=1041730000: data_out=00, valid=0, busy=0
-# Break key hit
-# Break in Module uart_rx at C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/uart_rx.sv line 106
-# End time: 02:31:33 on Oct 20,2024, Elapsed time: 0:14:04
-# Errors: 0, Warnings: 9
+# Tiempo                    0: LEDs = 0000, TX = 1
+# Simulación de la recepción de '10'
+# Enviando bit: 0
+# Enviando bit: 1
+# Datos recibidos: 00, LEDs actualizados a: 0000
+# Tiempo            312750000: LEDs = 0000, TX = 0
+# Tiempo            416910000: LEDs = 0000, TX = 1
+# Tiempo            521070000: LEDs = 0000, TX = 0
+# Tiempo           1250190000: LEDs = 0000, TX = 1
+# Tiempo           1302336000: Dato capturado en TX = 00000001
+# Simulación de la recepción de '01'
+# Enviando bit: 1
+# Enviando bit: 0
+# Tiempo           3037730000: LEDs = 0011, TX = 1
+# Datos recibidos: 11, LEDs actualizados a: 0011
+# Tiempo           3037770000: LEDs = 0011, TX = 0
+# Tiempo           3246090000: LEDs = 0011, TX = 1
+# Tiempo           4027356000: Dato capturado en TX = 11111110
+# ** Note: $stop    : C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/tb_fpga_top.sv(56)
+#    Time: 5241870 ns  Iteration: 0  Instance: /tb_fpga_top
+# Break in Module tb_fpga_top at C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/tb_fpga_top.sv line 56
+# End time: 05:13:01 on Oct 20,2024, Elapsed time: 0:02:35
+# Errors: 0, Warnings: 16

@@ -1,1 +1,1 @@
-Info (10281): Verilog HDL Declaration information at uart_tx.sv(13): object "BAUD_TICK" differs only in case from object "baud_tick" in the same scope File: C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files/uart_tx.sv Line: 13
+Info (10281): Verilog HDL Declaration information at uart_tx.sv(12): object "BAUD_TICK" differs only in case from object "baud_tick" in the same scope File: C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files/uart_tx.sv Line: 12

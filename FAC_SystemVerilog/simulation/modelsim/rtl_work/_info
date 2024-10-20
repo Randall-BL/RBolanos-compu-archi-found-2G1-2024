@@ -11,24 +11,24 @@ cModel Technology
 Z0 dC:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/simulation/modelsim
 vfpga_top
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1729412248
+Z2 !s110 1729422625
 !i10b 1
-!s100 J2m]azbZ=Q;[Z4EL9I3YY0
+!s100 e@=05;6U<Xgb<`M4YDZ1H3
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I4NL9;X:4nj>XL2o4kzd`]0
+I[;d`5`=zUCU<<Pe?>:^;W1
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1729411759
+w1729422018
 8C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv
 FC:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv
 !i122 1
-L0 1 51
+L0 2 59
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1729412248.000000
+Z6 !s108 1729422625.000000
 !s107 C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog|C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv|
 !i113 1
@@ -37,24 +37,24 @@ Z8 !s92 -sv -work work +incdir+C:/Users/lobok/Desktop/operativos/RBolanos-compu-
 Z9 tCvgOpt 0
 vtb_fpga_top
 R1
-R2
+Z10 !s110 1729422626
 !i10b 1
-!s100 SMbGaIIXjAL9RKo>EW71Y2
+!s100 ;ze^0SjcTeG1dACW;c5`53
 R3
-I0Ahka>klIJ2ZKzedV[8<f3
+IHR_KA9;Eciof9oefQN=LW1
 R4
 S1
 R0
-w1729412226
+w1729422494
 8C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/tb_fpga_top.sv
 FC:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/tb_fpga_top.sv
 !i122 3
-L0 3 104
+L0 2 109
 R5
 r1
 !s85 0
 31
-R6
+Z11 !s108 1729422626.000000
 !s107 C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/tb_fpga_top.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog|C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/tb_fpga_top.sv|
 !i113 1
@@ -71,7 +71,7 @@ I_aWl?GKCkV:OBlH]VEDzT0
 R4
 S1
 R0
-w1729303912
+w1729418641
 8C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/uart_rx.sv
 FC:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/uart_rx.sv
 !i122 0
@@ -80,7 +80,7 @@ R5
 r1
 !s85 0
 31
-!s108 1729412247.000000
+R6
 !s107 C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/uart_rx.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog|C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/uart_rx.sv|
 !i113 1
@@ -89,24 +89,24 @@ R8
 R9
 vuart_tx
 R1
-R2
+R10
 !i10b 1
-!s100 1EQHMaGhZ:ITaAHF[J[NV0
+!s100 z:ZOMlDb=C;FkzgQH`A7_2
 R3
-Ij:NNK;R8H;??E6YfeaaL62
+IIa1mAD?VY1D;9:ni]D4Rn1
 R4
 S1
 R0
-w1729411436
+w1729421883
 8C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files/uart_tx.sv
 FC:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files/uart_tx.sv
 !i122 2
-L0 1 92
+L0 1 125
 R5
 r1
 !s85 0
 31
-R6
+R11
 !s107 C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files/uart_tx.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files|C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files/uart_tx.sv|
 !i113 1
