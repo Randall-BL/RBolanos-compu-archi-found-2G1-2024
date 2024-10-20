@@ -29,46 +29,45 @@ module tb_fpga_top;
         #100;
         rst_n = 1;
 
-        // Simular la recepción de datos UART (ejemplo: 2 bits "10")
+        // Simular la recepción de datos UART (ejemplo: 8 bits "11001100")
         #100;
-        $display("Simulación de la recepción de '10'");
-        uart_receive(2'b10);  // Simular recepción de "10"
+        $display("Simulación de la recepción de '11001100'");
+        uart_receive(8'b11001100);  // Simular recepción de "11001100"
 
         // Esperar a que se procese y envíe de vuelta el dato
-        #104167;  // Tiempo necesario para enviar/recibir un byte completo a 9600 baudios
+        #1041670;  // Tiempo necesario para enviar/recibir un byte completo a 9600 baudios
 
         // Dar más tiempo para la actualización de los LEDs y procesamiento
         #2000000;
 
-        // Simular la recepción de datos UART (ejemplo: 2 bits "01")
+        // Simular la recepción de datos UART (ejemplo: 8 bits "10101010")
         #100000;
-        $display("Simulación de la recepción de '01'");
-        uart_receive(2'b01);  // Simular recepción de "01"
+        $display("Simulación de la recepción de '10101010'");
+        uart_receive(8'b10101010);  // Simular recepción de "10101010"
 
         // Esperar a que se procese y envíe de vuelta el dato
-        #104167;
+        #1041670;
 
         // Dar más tiempo para la actualización de los LEDs y procesamiento
         #2000000;
 
         // Finalizar la simulación
         #100000;
-        $stop;
+        $finish;
     end
 
-    // Tarea para simular la recepción UART (9600 baudios, 2 bits de datos, sin paridad, 1 bit de parada)
-    task uart_receive(input [1:0] data);
+    // Tarea para simular la recepción UART (9600 baudios, 8 bits de datos, sin paridad, 1 bit de parada)
+    task uart_receive(input [7:0] data);
         integer i;
         begin
             // Simular el bit de inicio (start bit)
             rx = 0;
             #(104167);  // Tiempo de 1 bit a 9600 baudios (104.167 µs)
 
-            // Enviar los 2 bits de datos (LSB primero)
-            for (i = 0; i < 2; i = i + 1) begin
+            // Enviar los 8 bits de datos (LSB primero)
+            for (i = 0; i < 8; i = i + 1) begin
                 rx = data[i];
                 #(104167);  // Tiempo de 1 bit a 9600 baudios
-                $display("Enviando bit: %b", data[i]); // Mostrar el bit que se está enviando
             end
 
             // Simular el bit de parada (stop bit)
@@ -83,28 +82,28 @@ module tb_fpga_top;
     end
 
     // Tarea para capturar y mostrar los datos transmitidos por TX
-    task uart_capture;
+    task capture_tx;
         reg [7:0] captured_data;
         integer i;
         begin
             @(negedge tx);  // Esperar al bit de inicio
-            #(104167/2);    // Esperar a la mitad del bit de inicio
+            #(104167/2);  // Mover al centro del bit de inicio
 
-            captured_data = 0;
             for (i = 0; i < 8; i = i + 1) begin
-                #104167;    // Esperar un bit time
+                #104167;
                 captured_data[i] = tx;
             end
 
-            #104167;        // Esperar el bit de parada
+            #104167;  // Esperar el bit de parada
             $display("Tiempo %t: Dato capturado en TX = %b", $time, captured_data);
         end
     endtask
 
-    // Proceso para capturar continuamente los datos de TX
+    // Proceso para capturar datos de TX
     initial begin
         forever begin
-            uart_capture;
+            capture_tx;
         end
     end
+
 endmodule
