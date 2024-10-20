@@ -2,111 +2,105 @@
 
 module tb_fpga_top;
 
-    // Parámetros para la simulación
-    parameter CLK_FREQ = 50000000;  // Frecuencia de reloj (50 MHz)
-    parameter BAUD_RATE = 9600;     // Velocidad de UART
-    localparam CLK_PERIOD = 1000000000 / CLK_FREQ;  // Periodo de reloj en nanosegundos
-    localparam BAUD_PERIOD = 1000000000 / BAUD_RATE; // Periodo de baudios en nanosegundos
+    // Parámetros
+    parameter CLK_PERIOD = 20; // 50MHz clock
+    parameter BAUD_RATE = 9600;
+    parameter BIT_PERIOD = 1000000000 / BAUD_RATE; // Periodo de un bit en ns
 
-    // Señales
+    // Señales de prueba
     reg clk;
     reg rst_n;
-    reg rx;
-    wire [1:0] leds;  // Señal para los LEDs
+    reg [7:0] data_in;
+    reg send;
+    wire tx;
+    wire [1:0] data_out;
+    wire valid;
+    wire busy;
 
-    // Instancia del módulo fpga_top
+    // Instancia del módulo bajo prueba
     fpga_top uut (
         .clk(clk),
         .rst_n(rst_n),
-        .rx(rx),
-        .leds(leds)
+        .rx(tx), // Conectamos tx directamente a rx para simular un loopback
+        .data_in(data_in),
+        .send(send),
+        .tx(tx),
+        .data_out(data_out),
+        .valid(valid),
+        .busy(busy)
     );
 
-    // Generación del reloj
-    initial begin
-        clk = 0;
-        forever #(CLK_PERIOD / 2) clk = ~clk;  // Genera un reloj de 50 MHz
-    end
+    // Generación de reloj
+    always #(CLK_PERIOD/2) clk = ~clk;
 
-    // Inicialización de señales
-    initial begin
-        rst_n = 1;    // Comienza en 1 (reset inactivo)
-        #50;
-        rst_n = 0;    // Activa el reset
-        #200;         // Mantiene el reset activo por 200 ns
-        rst_n = 1;    // Desactiva el reset
-        rx = 1;       // Línea RX en reposo (nivel alto)
-    end
-
-    // Tarea para enviar un dato por UART
-    task send_uart_data;
-        input [1:0] data_in;
-        integer i;
+    // Tarea para enviar un byte
+    task send_byte;
+        input [7:0] byte_to_send;
         begin
-            // Enviar bit de inicio (start bit)
-            rx = 0;
-            #(BAUD_PERIOD);
-
-            // Enviar bits de datos (LSB primero)
-            for (i = 0; i < 2; i = i + 1) begin
-                rx = data_in[i];
-                #(BAUD_PERIOD);
-            end
-
-            // Enviar bit de parada (stop bit)
-            rx = 1;
-            #(BAUD_PERIOD);
-
-            // Esperar un tiempo antes de enviar el siguiente dato
-            #(BAUD_PERIOD * 2);
-
-            // Agregar un mensaje entre las recepciones de datos
-            $display("Tiempo %t ns: Estado de LEDs entre datos: LEDs=%b", $time, leds);
+            @(posedge clk);
+            data_in = byte_to_send;
+            send = 1;
+            @(posedge clk);
+            send = 0;
+            // Esperamos hasta que se complete la transmisión
+            wait(!busy);
+            $display("Sent byte: %b", byte_to_send);
         end
     endtask
 
-    // Proceso de simulación
+    // Tarea para verificar el dato recibido
+    task verify_received;
+        input [7:0] sent_byte;
+        input [1:0] expected_decoded;
+        begin
+            // Esperar hasta que la señal `valid` esté alta
+            wait(valid);
+            #1; // Pequeño retraso para estabilización
+            if (data_out == expected_decoded)
+                $display("PASS: Sent %b, Received decoded %b", sent_byte, data_out);
+            else
+                $display("FAIL: Sent %b, Expected decoded %b, Got %b", sent_byte, expected_decoded, data_out);
+            // Agregar una aserción para mayor robustez
+            assert(data_out == expected_decoded) else 
+                $fatal("ERROR: Sent %b, Expected decoded %b, Got %b", sent_byte, expected_decoded, data_out);
+        end
+    endtask
+
+    // Secuencia de prueba
     initial begin
-        // Esperar un tiempo antes de comenzar la transmisión
-        #1000;
+        // Inicialización
+        clk = 0;
+        rst_n = 0;
+        data_in = 8'd0;
+        send = 0;
 
-        // Enviar datos de prueba
-        $display("Tiempo %t ns: Iniciando transmisión de datos", $time);
-        send_uart_data(2'b11);  // Enviar '11' (ambos LEDs encendidos)
-        send_uart_data(2'b01);  // Enviar '01' (LED0 apagado, LED1 encendido)
-        send_uart_data(2'b10);  // Enviar '10' (LED0 encendido, LED1 apagado)
-        send_uart_data(2'b00);  // Enviar '00' (ambos LEDs apagados)
+        // Reset con tiempo para estabilización
+        #100;
+        rst_n = 1;
 
-        // Finalizar la simulación después de un tiempo
-        #(BAUD_PERIOD * 20);
-        $stop;
+        // Prueba 1: Enviar 0001 (debe decodificar a 00)
+        send_byte(8'b00000001);
+        verify_received(8'b00000001, 2'b00);
+
+        // Prueba 2: Enviar 0101 (debe decodificar a 01)
+        send_byte(8'b00000101);
+        verify_received(8'b00000101, 2'b01);
+
+        // Prueba 3: Enviar 1001 (debe decodificar a 10)
+        send_byte(8'b00001001);
+        verify_received(8'b00001001, 2'b10);
+
+        // Prueba 4: Enviar 1101 (debe decodificar a 11)
+        send_byte(8'b00001101);
+        verify_received(8'b00001101, 2'b11);
+
+        // Fin de la simulación
+        #1000 $finish;
     end
 
-    // Monitoreo de señales en momentos clave
-    always @(posedge clk) begin
-        // Detectar cuando 'valid' se activa
-        if (uut.uart_receiver.valid) begin
-            $display("Tiempo %t ns: Datos recibidos: Data=%b, Valid=%b, LEDs=%b", $time, uut.uart_receiver.data, uut.uart_receiver.valid, leds);
-        end
-    end
-
-    // Monitoreo de eventos de recepción
-    always @(negedge rx) begin
-        $display("Tiempo %t ns: Inicio de recepción (Start bit detectado)", $time);
-    end
-
-    always @(posedge rx) begin
-        if (rx === 1'b1) begin
-            $display("Tiempo %t ns: Fin de recepción (Stop bit detectado)", $time);
-        end
-    end
-
-    // Monitoreo periódico del estado de los LEDs
+    // Monitor opcional para rastrear valores de interés
     initial begin
-        forever begin
-            #(BAUD_PERIOD * 5);
-            $display("Tiempo %t ns: Estado actual de LEDs: LEDs=%b", $time, leds);
-        end
+        $monitor("Time=%0t: data_out=%b, valid=%b, busy=%b", $time, data_out, valid, busy);
     end
 
 endmodule
