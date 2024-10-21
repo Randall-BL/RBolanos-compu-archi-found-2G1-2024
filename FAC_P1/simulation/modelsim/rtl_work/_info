@@ -1,0 +1,273 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/tenor/OneDrive/Documentos/FAC_P1/simulation/modelsim
+valu
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1729472781
+!i10b 1
+!s100 U9W`U<C1oEo=UUAc6Wdc23
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I]XV@:Dz@[:h]GXZ57=EWF0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1729472749
+8C:/Users/tenor/OneDrive/Documentos/FAC_P1/alu.sv
+FC:/Users/tenor/OneDrive/Documentos/FAC_P1/alu.sv
+!i122 0
+L0 4 45
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1729472781.000000
+!s107 C:/Users/tenor/OneDrive/Documentos/FAC_P1/alu.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1|C:/Users/tenor/OneDrive/Documentos/FAC_P1/alu.sv|
+!i113 1
+Z5 o-sv -work work
+Z6 !s92 -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1
+Z7 tCvgOpt 0
+vANDoperation_2bit
+R1
+Z8 !s110 1729472782
+!i10b 1
+!s100 a]>ZegjCXB3Pemg[giUzC2
+R2
+IYFRC<QV3SZAbTfVT5mz1X2
+R3
+S1
+R0
+w1729472685
+8C:/Users/tenor/OneDrive/Documentos/FAC_P1/ANDoperation_2bit.sv
+FC:/Users/tenor/OneDrive/Documentos/FAC_P1/ANDoperation_2bit.sv
+!i122 4
+Z9 L0 4 10
+R4
+r1
+!s85 0
+31
+Z10 !s108 1729472782.000000
+!s107 C:/Users/tenor/OneDrive/Documentos/FAC_P1/ANDoperation_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1|C:/Users/tenor/OneDrive/Documentos/FAC_P1/ANDoperation_2bit.sv|
+!i113 1
+R5
+R6
+R7
+n@a@n@doperation_2bit
+vbin_to_7seg
+R1
+Z11 !s110 1729472783
+!i10b 1
+!s100 IoTBI6J@fbf<o:9LihBTS3
+R2
+ID_8E<F5]o2D>V^FCW`KXL0
+R3
+S1
+R0
+w1729472457
+8C:/Users/tenor/OneDrive/Documentos/FAC_P1/bin_to_7seg.sv
+FC:/Users/tenor/OneDrive/Documentos/FAC_P1/bin_to_7seg.sv
+!i122 8
+L0 6 28
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/tenor/OneDrive/Documentos/FAC_P1/bin_to_7seg.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1|C:/Users/tenor/OneDrive/Documentos/FAC_P1/bin_to_7seg.sv|
+!i113 1
+R5
+R6
+R7
+vfull_adder_2bit
+R1
+R8
+!i10b 1
+!s100 mBI2l;5Q3>HmaG1@@3D=M3
+R2
+I:ZB86<EoM5FgYl]EE51i=0
+R3
+S1
+R0
+w1729472741
+8C:/Users/tenor/OneDrive/Documentos/FAC_P1/full_adder_2bit.sv
+FC:/Users/tenor/OneDrive/Documentos/FAC_P1/full_adder_2bit.sv
+!i122 1
+L0 5 14
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/tenor/OneDrive/Documentos/FAC_P1/full_adder_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1|C:/Users/tenor/OneDrive/Documentos/FAC_P1/full_adder_2bit.sv|
+!i113 1
+R5
+R6
+R7
+vORoperation_2bit
+R1
+R8
+!i10b 1
+!s100 3SlI`Eo;A3;gbfRC@AG[52
+R2
+I`iOfSmD>bB[g:SeUV`3Sh1
+R3
+S1
+R0
+w1729472763
+8C:/Users/tenor/OneDrive/Documentos/FAC_P1/ORoperation_2bit.sv
+FC:/Users/tenor/OneDrive/Documentos/FAC_P1/ORoperation_2bit.sv
+!i122 5
+R9
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/tenor/OneDrive/Documentos/FAC_P1/ORoperation_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1|C:/Users/tenor/OneDrive/Documentos/FAC_P1/ORoperation_2bit.sv|
+!i113 1
+R5
+R6
+R7
+n@o@roperation_2bit
+vpwm
+R1
+R8
+!i10b 1
+!s100 85D;z5LDBml6g`L;oXS:S0
+R2
+I405iPdH<Ea5gMjM^NnEHF2
+R3
+S1
+R0
+w1729472032
+8C:/Users/tenor/OneDrive/Documentos/FAC_P1/pwm.sv
+FC:/Users/tenor/OneDrive/Documentos/FAC_P1/pwm.sv
+!i122 6
+L0 16 28
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/tenor/OneDrive/Documentos/FAC_P1/pwm.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1|C:/Users/tenor/OneDrive/Documentos/FAC_P1/pwm.sv|
+!i113 1
+R5
+R6
+R7
+vsubstractor_2bit
+R1
+R8
+!i10b 1
+!s100 ZL990WibSmHID8]a5^[<W1
+R2
+Igj21<eSSSEUWUj@3XB=:>1
+R3
+S1
+R0
+w1729472697
+8C:/Users/tenor/OneDrive/Documentos/FAC_P1/substractor_2bit.sv
+FC:/Users/tenor/OneDrive/Documentos/FAC_P1/substractor_2bit.sv
+!i122 3
+L0 4 25
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/tenor/OneDrive/Documentos/FAC_P1/substractor_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1|C:/Users/tenor/OneDrive/Documentos/FAC_P1/substractor_2bit.sv|
+!i113 1
+R5
+R6
+R7
+vtb_top_module
+R1
+R11
+!i10b 1
+!s100 2j3cB6g=bZl]Q1LWF[ZO=1
+R2
+IiL?N2TYO:NQG6fUAfc1kO2
+R3
+S1
+R0
+w1729472005
+8C:/Users/tenor/OneDrive/Documentos/FAC_P1/tb_top_module.sv
+FC:/Users/tenor/OneDrive/Documentos/FAC_P1/tb_top_module.sv
+!i122 9
+L0 7 101
+R4
+r1
+!s85 0
+31
+!s108 1729472783.000000
+!s107 C:/Users/tenor/OneDrive/Documentos/FAC_P1/tb_top_module.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1|C:/Users/tenor/OneDrive/Documentos/FAC_P1/tb_top_module.sv|
+!i113 1
+R5
+R6
+R7
+vtop_module
+R1
+R8
+!i10b 1
+!s100 [?9^JZYoHD1JY2Q<Thd=P2
+R2
+I_^LaF7DCPX9e>=S5j150?1
+R3
+S1
+R0
+w1729472430
+8C:/Users/tenor/OneDrive/Documentos/FAC_P1/top_module.sv
+FC:/Users/tenor/OneDrive/Documentos/FAC_P1/top_module.sv
+!i122 7
+L0 4 35
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/tenor/OneDrive/Documentos/FAC_P1/top_module.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1|C:/Users/tenor/OneDrive/Documentos/FAC_P1/top_module.sv|
+!i113 1
+R5
+R6
+R7
+vunit_adder
+R1
+R8
+!i10b 1
+!s100 EJA?ke87mh58iZf87@1Fh0
+R2
+IZ1A4iF7Mzg5>MAFl;i^ca0
+R3
+S1
+R0
+w1729472720
+8C:/Users/tenor/OneDrive/Documentos/FAC_P1/unit_adder.sv
+FC:/Users/tenor/OneDrive/Documentos/FAC_P1/unit_adder.sv
+!i122 2
+L0 4 8
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/tenor/OneDrive/Documentos/FAC_P1/unit_adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1|C:/Users/tenor/OneDrive/Documentos/FAC_P1/unit_adder.sv|
+!i113 1
+R5
+R6
+R7
