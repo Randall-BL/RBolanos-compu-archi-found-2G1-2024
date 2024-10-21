@@ -10,142 +10,161 @@
 # Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/FAC_P1/alu.sv}
+# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/alu.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:06:21 on Oct 20,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1" C:/Users/tenor/OneDrive/Documentos/FAC_P1/alu.sv 
+# Start time: 13:47:56 on Oct 21,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1" C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/alu.sv 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 19:06:21 on Oct 20,2024, Elapsed time: 0:00:00
+# End time: 13:47:56 on Oct 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/FAC_P1/full_adder_2bit.sv}
+# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/full_adder_2bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:06:22 on Oct 20,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1" C:/Users/tenor/OneDrive/Documentos/FAC_P1/full_adder_2bit.sv 
+# Start time: 13:47:56 on Oct 21,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1" C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/full_adder_2bit.sv 
 # -- Compiling module full_adder_2bit
 # 
 # Top level modules:
 # 	full_adder_2bit
-# End time: 19:06:22 on Oct 20,2024, Elapsed time: 0:00:00
+# End time: 13:47:57 on Oct 21,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/FAC_P1/unit_adder.sv}
+# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/unit_adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:06:22 on Oct 20,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1" C:/Users/tenor/OneDrive/Documentos/FAC_P1/unit_adder.sv 
+# Start time: 13:47:57 on Oct 21,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1" C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/unit_adder.sv 
 # -- Compiling module unit_adder
 # 
 # Top level modules:
 # 	unit_adder
-# End time: 19:06:22 on Oct 20,2024, Elapsed time: 0:00:00
+# End time: 13:47:57 on Oct 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/FAC_P1/substractor_2bit.sv}
+# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/substractor_2bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:06:22 on Oct 20,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1" C:/Users/tenor/OneDrive/Documentos/FAC_P1/substractor_2bit.sv 
+# Start time: 13:47:57 on Oct 21,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1" C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/substractor_2bit.sv 
 # -- Compiling module substractor_2bit
 # 
 # Top level modules:
 # 	substractor_2bit
-# End time: 19:06:22 on Oct 20,2024, Elapsed time: 0:00:00
+# End time: 13:47:57 on Oct 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/FAC_P1/ANDoperation_2bit.sv}
+# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/ANDoperation_2bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:06:22 on Oct 20,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1" C:/Users/tenor/OneDrive/Documentos/FAC_P1/ANDoperation_2bit.sv 
+# Start time: 13:47:57 on Oct 21,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1" C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/ANDoperation_2bit.sv 
 # -- Compiling module ANDoperation_2bit
 # 
 # Top level modules:
 # 	ANDoperation_2bit
-# End time: 19:06:22 on Oct 20,2024, Elapsed time: 0:00:00
+# End time: 13:47:57 on Oct 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/FAC_P1/ORoperation_2bit.sv}
+# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/ORoperation_2bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:06:22 on Oct 20,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1" C:/Users/tenor/OneDrive/Documentos/FAC_P1/ORoperation_2bit.sv 
+# Start time: 13:47:57 on Oct 21,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1" C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/ORoperation_2bit.sv 
 # -- Compiling module ORoperation_2bit
 # 
 # Top level modules:
 # 	ORoperation_2bit
-# End time: 19:06:22 on Oct 20,2024, Elapsed time: 0:00:00
+# End time: 13:47:57 on Oct 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/FAC_P1/pwm.sv}
+# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/pwm.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:06:22 on Oct 20,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1" C:/Users/tenor/OneDrive/Documentos/FAC_P1/pwm.sv 
+# Start time: 13:47:57 on Oct 21,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1" C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/pwm.sv 
 # -- Compiling module pwm
 # 
 # Top level modules:
 # 	pwm
-# End time: 19:06:22 on Oct 20,2024, Elapsed time: 0:00:00
+# End time: 13:47:57 on Oct 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/FAC_P1/top_module.sv}
+# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:06:22 on Oct 20,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1" C:/Users/tenor/OneDrive/Documentos/FAC_P1/top_module.sv 
+# Start time: 13:47:57 on Oct 21,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1" C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv 
 # -- Compiling module top_module
 # 
 # Top level modules:
 # 	top_module
-# End time: 19:06:22 on Oct 20,2024, Elapsed time: 0:00:00
+# End time: 13:47:57 on Oct 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/FAC_P1/bin_to_7seg.sv}
+# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/bin_to_7seg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:06:22 on Oct 20,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1" C:/Users/tenor/OneDrive/Documentos/FAC_P1/bin_to_7seg.sv 
+# Start time: 13:47:57 on Oct 21,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1" C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/bin_to_7seg.sv 
 # -- Compiling module bin_to_7seg
 # 
 # Top level modules:
 # 	bin_to_7seg
-# End time: 19:06:23 on Oct 20,2024, Elapsed time: 0:00:01
+# End time: 13:47:57 on Oct 21,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/FirtsDecoder_4to2bits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:47:57 on Oct 21,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1" C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/FirtsDecoder_4to2bits.sv 
+# -- Compiling module FirtsDecoder_4to2bits
+# 
+# Top level modules:
+# 	FirtsDecoder_4to2bits
+# End time: 13:47:57 on Oct 21,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/reg_2bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:47:58 on Oct 21,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1" C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/reg_2bit.sv 
+# -- Compiling module reg_2bit
+# 
+# Top level modules:
+# 	reg_2bit
+# End time: 13:47:58 on Oct 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/FAC_P1/tb_top_module.sv}
+# vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/tb_top_module.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:06:23 on Oct 20,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_P1" C:/Users/tenor/OneDrive/Documentos/FAC_P1/tb_top_module.sv 
+# Start time: 13:47:58 on Oct 21,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1" C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/tb_top_module.sv 
 # -- Compiling module tb_top_module
 # 
 # Top level modules:
 # 	tb_top_module
-# End time: 19:06:23 on Oct 20,2024, Elapsed time: 0:00:00
+# End time: 13:47:58 on Oct 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_top_module
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_top_module 
-# Start time: 19:06:23 on Oct 20,2024
+# Start time: 13:47:58 on Oct 21,2024
 # Loading sv_std.std
 # Loading work.tb_top_module
 # Loading work.top_module
+# Loading work.FirtsDecoder_4to2bits
 # Loading work.alu
 # Loading work.full_adder_2bit
 # Loading work.unit_adder
 # Loading work.substractor_2bit
 # Loading work.ANDoperation_2bit
 # Loading work.ORoperation_2bit
+# Loading work.reg_2bit
 # Loading work.pwm
 # Loading work.bin_to_7seg
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_top_module/dut File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/tb_top_module.sv Line: 20
-# ** Warning: (vsim-3722) C:/Users/tenor/OneDrive/Documentos/FAC_P1/tb_top_module.sv(20): [TFMPC] - Missing connection for port 'seg1'.
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu_inst'.  Expected 8, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_top_module/dut/alu_inst File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/top_module.sv Line: 17
-# ** Warning: (vsim-3722) C:/Users/tenor/OneDrive/Documentos/FAC_P1/top_module.sv(17): [TFMPC] - Missing connection for port 'Z'.
-# ** Warning: (vsim-3722) C:/Users/tenor/OneDrive/Documentos/FAC_P1/top_module.sv(17): [TFMPC] - Missing connection for port 'C'.
-# ** Warning: (vsim-3722) C:/Users/tenor/OneDrive/Documentos/FAC_P1/top_module.sv(17): [TFMPC] - Missing connection for port 'V'.
-# ** Warning: (vsim-3722) C:/Users/tenor/OneDrive/Documentos/FAC_P1/top_module.sv(17): [TFMPC] - Missing connection for port 'S'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/tenor/OneDrive/Documentos/FAC_P1/full_adder_2bit.sv(7).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_top_module/dut/alu_inst/add File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/alu.sv Line: 25
+#    Time: 0 ps  Iteration: 0  Instance: /tb_top_module/dut/alu_inst File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 29
+# ** Warning: (vsim-3722) C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv(29): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv(29): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv(29): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-3722) C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv(29): [TFMPC] - Missing connection for port 'S'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/full_adder_2bit.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_top_module/dut/alu_inst/add File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/alu.sv Line: 25
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'add'.  Expected 5, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_top_module/dut/alu_inst/sub/add File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/substractor_2bit.sv Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/tenor/OneDrive/Documentos/FAC_P1/full_adder_2bit.sv(7).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_top_module/dut/alu_inst/sub/add File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/substractor_2bit.sv Line: 18
-# ** Warning: (vsim-3722) C:/Users/tenor/OneDrive/Documentos/FAC_P1/substractor_2bit.sv(18): [TFMPC] - Missing connection for port 'cout'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/tenor/OneDrive/Documentos/FAC_P1/full_adder_2bit.sv(7).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_top_module/dut/alu_inst/sub/sub File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/substractor_2bit.sv Line: 23
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (2) for port 'bin'. The port definition is at: C:/Users/tenor/OneDrive/Documentos/FAC_P1/bin_to_7seg.sv(7).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_top_module/dut/result_to_7seg File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/top_module.sv Line: 33
+#    Time: 0 ps  Iteration: 0  Instance: /tb_top_module/dut/alu_inst/sub/add File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/substractor_2bit.sv Line: 18
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/full_adder_2bit.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_top_module/dut/alu_inst/sub/add File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/substractor_2bit.sv Line: 18
+# ** Warning: (vsim-3722) C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/substractor_2bit.sv(18): [TFMPC] - Missing connection for port 'cout'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/full_adder_2bit.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_top_module/dut/alu_inst/sub/sub File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/substractor_2bit.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (2) for port 'bin'. The port definition is at: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/bin_to_7seg.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_top_module/dut/result_to_7seg File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 53
 # 
 # add wave *
 # view structure
@@ -153,17 +172,17 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ALU Operation: SUM, ALU result: 11, Motor speed: 11111111, Flags - Z: 0, C: 0, V: 0, S: 1
-# ALU Operation: SUBTRACT, ALU result: 10, Motor speed: 11000000, Flags - Z: 0, C: 0, V: 0, S: 1
-# ALU Operation: AND, ALU result: 00, Motor speed: 01000000, Flags - Z: 1, C: 0, V: 0, S: 0
-# ALU Operation: OR, ALU result: 01, Motor speed: 10000000, Flags - Z: 0, C: 0, V: 0, S: 0
+# Dec: 1000, Decoder Result: 00, ALU IN2: 01, ALU Operation: SUM, ALU result: 01, Motor speed: 10000000, Flags - Z: 0, C: 0, V: 0, S: 0
+# Dec: 1100, Decoder Result: 01, ALU IN2: 11, ALU Operation: OR, ALU result: 11, Motor speed: 11111111, Flags - Z: 0, C: 0, V: 0, S: 1
+# Dec: 1110, Decoder Result: 10, ALU IN2: 10, ALU Operation: SUB, ALU result: 00, Motor speed: 01000000, Flags - Z: 1, C: 0, V: 0, S: 0
+# Dec: 1111, Decoder Result: 11, ALU IN2: 10, ALU Operation: AND, ALU result: 10, Motor speed: 11000000, Flags - Z: 0, C: 0, V: 0, S: 1
 # Flag Test - Z, ALU result: 00, Z: 1
 # Flag Test - C, ALU result: 10, C: 1
 # Flag Test - V, ALU result: 01, V: 1
 # Flag Test - S, ALU result: 10, S: 1
-# ** Note: $finish    : C:/Users/tenor/OneDrive/Documentos/FAC_P1/tb_top_module.sv(104)
+# ** Note: $finish    : C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/tb_top_module.sv(139)
 #    Time: 280 ps  Iteration: 0  Instance: /tb_top_module
 # 1
-# Break in Module tb_top_module at C:/Users/tenor/OneDrive/Documentos/FAC_P1/tb_top_module.sv line 104
-# End time: 19:08:08 on Oct 20,2024, Elapsed time: 0:01:45
-# Errors: 0, Warnings: 13
+# Break in Module tb_top_module at C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/tb_top_module.sv line 139
+# End time: 13:48:53 on Oct 21,2024, Elapsed time: 0:00:55
+# Errors: 0, Warnings: 11

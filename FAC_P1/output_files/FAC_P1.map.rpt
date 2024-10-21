@@ -1,5 +1,5 @@
 Analysis & Elaboration report for FAC_P1
-Sun Oct 20 19:06:14 2024
+Mon Oct 21 13:47:49 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sun Oct 20 19:06:14 2024       ;
+; Analysis & Elaboration Status ; Successful - Mon Oct 21 13:47:49 2024       ;
 ; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                 ; FAC_P1                                      ;
 ; Top-level Entity Name         ; top_module                                  ;
@@ -230,46 +230,52 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Oct 20 19:06:04 2024
+    Info: Processing started: Mon Oct 21 13:47:39 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FAC_P1 -c FAC_P1 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Warning (10275): Verilog HDL Module Instantiation warning at alu.sv(26): ignored dangling comma in List of Port Connections File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/alu.sv Line: 26
+Warning (10275): Verilog HDL Module Instantiation warning at alu.sv(26): ignored dangling comma in List of Port Connections File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/alu.sv Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
-    Info (12023): Found entity 1: alu File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/alu.sv Line: 4
+    Info (12023): Found entity 1: alu File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/alu.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file full_adder_2bit.sv
-    Info (12023): Found entity 1: full_adder_2bit File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/full_adder_2bit.sv Line: 5
+    Info (12023): Found entity 1: full_adder_2bit File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/full_adder_2bit.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file unit_adder.sv
-    Info (12023): Found entity 1: unit_adder File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/unit_adder.sv Line: 4
+    Info (12023): Found entity 1: unit_adder File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/unit_adder.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file substractor_2bit.sv
-    Info (12023): Found entity 1: substractor_2bit File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/substractor_2bit.sv Line: 4
+    Info (12023): Found entity 1: substractor_2bit File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/substractor_2bit.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file andoperation_2bit.sv
-    Info (12023): Found entity 1: ANDoperation_2bit File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/ANDoperation_2bit.sv Line: 4
+    Info (12023): Found entity 1: ANDoperation_2bit File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/ANDoperation_2bit.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file oroperation_2bit.sv
-    Info (12023): Found entity 1: ORoperation_2bit File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/ORoperation_2bit.sv Line: 4
+    Info (12023): Found entity 1: ORoperation_2bit File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/ORoperation_2bit.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file pwm.sv
-    Info (12023): Found entity 1: pwm File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/pwm.sv Line: 16
+    Info (12023): Found entity 1: pwm File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/pwm.sv Line: 16
 Info (12021): Found 1 design units, including 1 entities, in source file top_module.sv
-    Info (12023): Found entity 1: top_module File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/top_module.sv Line: 4
+    Info (12023): Found entity 1: top_module File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file tb_top_module.sv
-    Info (12023): Found entity 1: tb_top_module File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/tb_top_module.sv Line: 7
+    Info (12023): Found entity 1: tb_top_module File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/tb_top_module.sv Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file bin_to_7seg.sv
-    Info (12023): Found entity 1: bin_to_7seg File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/bin_to_7seg.sv Line: 6
+    Info (12023): Found entity 1: bin_to_7seg File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/bin_to_7seg.sv Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file firtsdecoder_4to2bits.sv
+    Info (12023): Found entity 1: FirtsDecoder_4to2bits File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/FirtsDecoder_4to2bits.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file reg_2bit.sv
+    Info (12023): Found entity 1: reg_2bit File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/reg_2bit.sv Line: 3
 Info (12127): Elaborating entity "top_module" for the top level hierarchy
-Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_inst" File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/top_module.sv Line: 22
-Info (12128): Elaborating entity "full_adder_2bit" for hierarchy "alu:alu_inst|full_adder_2bit:add" File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/alu.sv Line: 25
-Info (12128): Elaborating entity "unit_adder" for hierarchy "alu:alu_inst|full_adder_2bit:add|unit_adder:adder0" File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/full_adder_2bit.sv Line: 15
-Info (12128): Elaborating entity "substractor_2bit" for hierarchy "alu:alu_inst|substractor_2bit:sub" File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/alu.sv Line: 26
-Info (12128): Elaborating entity "ANDoperation_2bit" for hierarchy "alu:alu_inst|ANDoperation_2bit:andmodule" File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/alu.sv Line: 27
-Info (12128): Elaborating entity "ORoperation_2bit" for hierarchy "alu:alu_inst|ORoperation_2bit:ormodule" File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/alu.sv Line: 28
-Info (12128): Elaborating entity "pwm" for hierarchy "pwm:pwm_inst" File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/top_module.sv Line: 30
-Warning (10230): Verilog HDL assignment warning at pwm.sv(34): truncated value with size 32 to match size of target (8) File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/pwm.sv Line: 34
-Info (12128): Elaborating entity "bin_to_7seg" for hierarchy "bin_to_7seg:result_to_7seg" File: C:/Users/tenor/OneDrive/Documentos/FAC_P1/top_module.sv Line: 36
+Info (12128): Elaborating entity "FirtsDecoder_4to2bits" for hierarchy "FirtsDecoder_4to2bits:decoder_inst" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 26
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_inst" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 34
+Info (12128): Elaborating entity "full_adder_2bit" for hierarchy "alu:alu_inst|full_adder_2bit:add" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/alu.sv Line: 25
+Info (12128): Elaborating entity "unit_adder" for hierarchy "alu:alu_inst|full_adder_2bit:add|unit_adder:adder0" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/full_adder_2bit.sv Line: 15
+Info (12128): Elaborating entity "substractor_2bit" for hierarchy "alu:alu_inst|substractor_2bit:sub" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/alu.sv Line: 26
+Info (12128): Elaborating entity "ANDoperation_2bit" for hierarchy "alu:alu_inst|ANDoperation_2bit:andmodule" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/alu.sv Line: 27
+Info (12128): Elaborating entity "ORoperation_2bit" for hierarchy "alu:alu_inst|ORoperation_2bit:ormodule" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/alu.sv Line: 28
+Info (12128): Elaborating entity "reg_2bit" for hierarchy "reg_2bit:reg_inst" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 42
+Info (12128): Elaborating entity "pwm" for hierarchy "pwm:pwm_inst" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 50
+Warning (10230): Verilog HDL assignment warning at pwm.sv(34): truncated value with size 32 to match size of target (8) File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/pwm.sv Line: 34
+Info (12128): Elaborating entity "bin_to_7seg" for hierarchy "bin_to_7seg:result_to_7seg" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 56
 Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4770 megabytes
-    Info: Processing ended: Sun Oct 20 19:06:14 2024
+    Info: Peak virtual memory: 4768 megabytes
+    Info: Processing ended: Mon Oct 21 13:47:49 2024
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Total CPU time (on all processors): 00:00:15
 
 

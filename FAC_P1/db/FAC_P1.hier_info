@@ -1,20 +1,36 @@
 |top_module
-clk => clk.IN1
-rst => rst.IN1
-alu_a[0] => alu_a[0].IN1
-alu_a[1] => alu_a[1].IN1
+clk => clk.IN2
+rst => rst.IN2
+A => A.IN1
+B => B.IN1
+C => C.IN1
+D => D.IN1
 alu_b[0] => alu_b[0].IN1
 alu_b[1] => alu_b[1].IN1
 alu_op[0] => alu_op[0].IN1
 alu_op[1] => alu_op[1].IN1
-seg1[0] << bin_to_7seg:result_to_7seg.seg
-seg1[1] << bin_to_7seg:result_to_7seg.seg
-seg1[2] << bin_to_7seg:result_to_7seg.seg
-seg1[3] << bin_to_7seg:result_to_7seg.seg
-seg1[4] << bin_to_7seg:result_to_7seg.seg
-seg1[5] << bin_to_7seg:result_to_7seg.seg
-seg1[6] << bin_to_7seg:result_to_7seg.seg
-motor_pwm << pwm:pwm_inst.motor_pwm
+seg1[0] <= bin_to_7seg:result_to_7seg.seg
+seg1[1] <= bin_to_7seg:result_to_7seg.seg
+seg1[2] <= bin_to_7seg:result_to_7seg.seg
+seg1[3] <= bin_to_7seg:result_to_7seg.seg
+seg1[4] <= bin_to_7seg:result_to_7seg.seg
+seg1[5] <= bin_to_7seg:result_to_7seg.seg
+seg1[6] <= bin_to_7seg:result_to_7seg.seg
+motor_pwm <= pwm:pwm_inst.motor_pwm
+
+
+|top_module|FirtsDecoder_4to2bits:decoder_inst
+A => U3.IN0
+A => U7.IN1
+B => U3.IN1
+B => U7.IN2
+C => U3.IN2
+C => U5.IN0
+C => U4.IN0
+D => U5.IN1
+D => U4.IN1
+Y0 <= U3.DB_MAX_OUTPUT_PORT_TYPE
+Y1 <= U7.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_module|alu:alu_inst
@@ -163,6 +179,17 @@ b[0] => result.IN1
 b[1] => result.IN1
 result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
 result[1] <= result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|reg_2bit:reg_inst
+clk => q~1.CLK
+clk => q~0.CLK
+rst => q~1.ACLR
+rst => q~0.ACLR
+d[0] => q~1.DATAIN
+d[1] => q~0.DATAIN
+q[0] <= q~1.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_module|pwm:pwm_inst

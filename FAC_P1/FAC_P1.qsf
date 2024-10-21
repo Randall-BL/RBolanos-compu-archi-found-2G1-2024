@@ -75,4 +75,6 @@ set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_top_modul
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_top_module -section_id tb_top_module
 set_global_assignment -name EDA_TEST_BENCH_FILE tb_top_module.sv -section_id tb_top_module
 set_global_assignment -name SYSTEMVERILOG_FILE bin_to_7seg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE FirtsDecoder_4to2bits.sv
+set_global_assignment -name SYSTEMVERILOG_FILE reg_2bit.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
