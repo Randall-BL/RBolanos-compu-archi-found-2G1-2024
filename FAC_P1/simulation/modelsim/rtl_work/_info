@@ -11,33 +11,33 @@ cModel Technology
 Z0 dC:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/simulation/modelsim
 valu
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-!s110 1729540076
+!s110 1729559287
 !i10b 1
-!s100 U9W`U<C1oEo=UUAc6Wdc23
+!s100 Vok3<_9G3LnfP4>YVZWVI1
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IN1[nfEOmR9^P0IM[PB63Z0
+I@YK`bWf]h^T?enUPC7oCk1
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1729472749
+w1729555621
 8C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/alu.sv
 FC:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/alu.sv
 !i122 0
-L0 4 45
+L0 4 51
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1729540076.000000
+!s108 1729559287.000000
 !s107 C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/alu.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1|C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/alu.sv|
 !i113 1
-Z6 o-sv -work work
-Z7 !s92 -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1
-Z8 tCvgOpt 0
+Z5 o-sv -work work
+Z6 !s92 -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1
+Z7 tCvgOpt 0
 vANDoperation_2bit
 R1
-Z9 !s110 1729540077
+Z8 !s110 1729559288
 !i10b 1
 !s100 a]>ZegjCXB3Pemg[giUzC2
 R2
@@ -49,75 +49,75 @@ w1729472685
 8C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/ANDoperation_2bit.sv
 FC:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/ANDoperation_2bit.sv
 !i122 4
-Z10 L0 4 10
+Z9 L0 4 10
 R4
 r1
 !s85 0
 31
-Z11 !s108 1729540077.000000
+Z10 !s108 1729559288.000000
 !s107 C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/ANDoperation_2bit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1|C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/ANDoperation_2bit.sv|
 !i113 1
+R5
 R6
 R7
-R8
 n@a@n@doperation_2bit
 vbin_to_7seg
 R1
-R9
+Z11 !s110 1729559289
 !i10b 1
-!s100 IoTBI6J@fbf<o:9LihBTS3
+!s100 Hb7Dj9NAi4G3PDT[S@<Yk2
 R2
-IcG1B0TU7EI:aVffU>R>gY3
+IInm1b[9LJM5d[]GaO27[K3
 R3
 S1
 R0
-w1729472457
+w1729559256
 8C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/bin_to_7seg.sv
 FC:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/bin_to_7seg.sv
 !i122 8
-L0 6 28
+L0 7 56
 R4
 r1
 !s85 0
 31
-R11
+R10
 !s107 C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/bin_to_7seg.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1|C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/bin_to_7seg.sv|
 !i113 1
+R5
 R6
 R7
-R8
 vFirtsDecoder_4to2bits
 R1
-R9
+R11
 !i10b 1
-!s100 3?>z[Y5cUZ05NQ;YOE[VP2
+!s100 BSRf1BJ9la0Rhoe0dIHYA2
 R2
-IGg_DliLg3o>IT0OnjilcZ0
+I]a4eM[h484mJD__4BJ1[72
 R3
 S1
 R0
-w1729533937
+w1729552557
 8C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/FirtsDecoder_4to2bits.sv
 FC:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/FirtsDecoder_4to2bits.sv
 !i122 9
-L0 5 32
+L0 11 28
 R4
 r1
 !s85 0
 31
-R11
+Z12 !s108 1729559289.000000
 !s107 C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/FirtsDecoder_4to2bits.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1|C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/FirtsDecoder_4to2bits.sv|
 !i113 1
+R5
 R6
 R7
-R8
 n@firts@decoder_4to2bits
 vfull_adder_2bit
 R1
-R9
+R8
 !i10b 1
 !s100 mBI2l;5Q3>HmaG1@@3D=M3
 R2
@@ -134,16 +134,16 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/full_adder_2bit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1|C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/full_adder_2bit.sv|
 !i113 1
+R5
 R6
 R7
-R8
 vORoperation_2bit
 R1
-R9
+R8
 !i10b 1
 !s100 3SlI`Eo;A3;gbfRC@AG[52
 R2
@@ -155,22 +155,22 @@ w1729472763
 8C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/ORoperation_2bit.sv
 FC:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/ORoperation_2bit.sv
 !i122 5
-R10
+R9
 R4
 r1
 !s85 0
 31
-R11
+R10
 !s107 C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/ORoperation_2bit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1|C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/ORoperation_2bit.sv|
 !i113 1
+R5
 R6
 R7
-R8
 n@o@roperation_2bit
 vpwm
 R1
-R9
+R8
 !i10b 1
 !s100 85D;z5LDBml6g`L;oXS:S0
 R2
@@ -187,16 +187,16 @@ R4
 r1
 !s85 0
 31
-R11
+R10
 !s107 C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/pwm.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1|C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/pwm.sv|
 !i113 1
+R5
 R6
 R7
-R8
 vreg_2bit
 R1
-Z12 !s110 1729540078
+R11
 !i10b 1
 !s100 a3HbFW5fH[AmL7DN>[NWT2
 R2
@@ -213,16 +213,16 @@ R4
 r1
 !s85 0
 31
-Z13 !s108 1729540078.000000
+R12
 !s107 C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/reg_2bit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1|C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/reg_2bit.sv|
 !i113 1
+R5
 R6
 R7
-R8
 vsubstractor_2bit
 R1
-R9
+R8
 !i10b 1
 !s100 ZL990WibSmHID8]a5^[<W1
 R2
@@ -239,24 +239,24 @@ R4
 r1
 !s85 0
 31
-R11
+R10
 !s107 C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/substractor_2bit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1|C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/substractor_2bit.sv|
 !i113 1
+R5
 R6
 R7
-R8
 vtb_top_module
 R1
-R12
+R11
 !i10b 1
-!s100 ^46]Lm5DYk[P9JnL@1JnI3
+!s100 nkgNEn?g>i346LO=[PNmg0
 R2
-IziZFWdK@NRZT2QX4=E[8D2
+IY3PE3[]kXIGPOJP]k9M:P3
 R3
 S1
 R0
-w1729539729
+w1729556360
 8C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/tb_top_module.sv
 FC:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/tb_top_module.sv
 !i122 11
@@ -265,42 +265,42 @@ R4
 r1
 !s85 0
 31
-R13
+R12
 !s107 C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/tb_top_module.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1|C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/tb_top_module.sv|
 !i113 1
+R5
 R6
 R7
-R8
 vtop_module
 R1
-R9
+R8
 !i10b 1
-!s100 6c4_2:VlG8_^@OF`Pz4@_0
+!s100 E30_@`F;5Z;k5`0a:R_8f2
 R2
-I;;Mnz<WaAZc64>PK[O>E10
+IY<LXBOZIa11lH@XTBG3iM2
 R3
 S1
 R0
-w1729540031
+w1729557895
 8C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv
 FC:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv
 !i122 7
-L0 4 55
+L0 6 78
 R4
 r1
 !s85 0
 31
-R11
+R10
 !s107 C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1|C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv|
 !i113 1
+R5
 R6
 R7
-R8
 vunit_adder
 R1
-R9
+R8
 !i10b 1
 !s100 EJA?ke87mh58iZf87@1Fh0
 R2
@@ -317,10 +317,10 @@ R4
 r1
 !s85 0
 31
-R11
+R10
 !s107 C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/unit_adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1|C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/unit_adder.sv|
 !i113 1
+R5
 R6
 R7
-R8

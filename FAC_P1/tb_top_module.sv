@@ -97,9 +97,9 @@ module tb_top_module;
 
         // Bandera Zero: Cuando a = 0, b = 0 en la operación AND (debe dar Z = 1)
 		  A = 1;
-        B = 0;
-        C = 0;
-        D = 0;
+        B = 1;
+        C = 1;
+        D = 1;
         alu_b = 2'b00;
         alu_op = 2'b10; // AND
         #20;
@@ -109,7 +109,7 @@ module tb_top_module;
         A = 1;
         B = 1;
         C = 1;
-        D = 1; 
+        D = 0; 
         alu_b = 2'b11; 
         alu_op = 2'b00; // Suma
         #20;
@@ -118,7 +118,7 @@ module tb_top_module;
         // Bandera Overflow: Cuando a = 2, b = 3 en la operación SUM (debe dar V = 1)
         A = 1;
         B = 1;
-        C = 1;
+        C = 0;
         D = 0; 
         alu_b = 2'b11; 
         alu_op = 2'b00; // Suma
@@ -127,7 +127,7 @@ module tb_top_module;
 
         // Bandera Signo: Cuando a = 1, b = 3 en la operación SUBTRACT (debe dar S = 1)
         A = 1;
-        B = 1;
+        B = 0;
         C = 0;
         D = 0; 
         alu_b = 2'b11; 

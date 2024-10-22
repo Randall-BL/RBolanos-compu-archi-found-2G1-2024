@@ -77,4 +77,26 @@ set_global_assignment -name EDA_TEST_BENCH_FILE tb_top_module.sv -section_id tb_
 set_global_assignment -name SYSTEMVERILOG_FILE bin_to_7seg.sv
 set_global_assignment -name SYSTEMVERILOG_FILE FirtsDecoder_4to2bits.sv
 set_global_assignment -name SYSTEMVERILOG_FILE reg_2bit.sv
+set_location_assignment PIN_AC30 -to A
+set_location_assignment PIN_AB28 -to B
+set_location_assignment PIN_Y27 -to C
+set_location_assignment PIN_AB30 -to D
+set_location_assignment PIN_W25 -to alu_b[0]
+set_location_assignment PIN_V25 -to alu_b[1]
+set_location_assignment PIN_AC28 -to alu_op[0]
+set_location_assignment PIN_AD30 -to alu_op[1]
+set_location_assignment PIN_AA30 -to clk
+set_location_assignment PIN_AC29 -to rst
+set_location_assignment PIN_AA24 -to motor_pwm
+set_location_assignment PIN_W17 -to seg1[0]
+set_location_assignment PIN_V18 -to seg1[1]
+set_location_assignment PIN_AG17 -to seg1[2]
+set_location_assignment PIN_AG16 -to seg1[3]
+set_location_assignment PIN_AH17 -to seg1[4]
+set_location_assignment PIN_AG18 -to seg1[5]
+set_location_assignment PIN_AH18 -to seg1[6]
+set_location_assignment PIN_AF25 -to leds[0]
+set_location_assignment PIN_AG25 -to leds[1]
+set_location_assignment PIN_AD24 -to leds[2]
+set_location_assignment PIN_AC23 -to leds[3]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

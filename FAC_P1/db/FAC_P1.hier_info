@@ -9,28 +9,39 @@ alu_b[0] => alu_b[0].IN1
 alu_b[1] => alu_b[1].IN1
 alu_op[0] => alu_op[0].IN1
 alu_op[1] => alu_op[1].IN1
-seg1[0] <= bin_to_7seg:result_to_7seg.seg
-seg1[1] <= bin_to_7seg:result_to_7seg.seg
-seg1[2] <= bin_to_7seg:result_to_7seg.seg
-seg1[3] <= bin_to_7seg:result_to_7seg.seg
-seg1[4] <= bin_to_7seg:result_to_7seg.seg
-seg1[5] <= bin_to_7seg:result_to_7seg.seg
-seg1[6] <= bin_to_7seg:result_to_7seg.seg
-motor_pwm <= pwm:pwm_inst.motor_pwm
+seg1[0] << bin_to_7seg:result_to_7seg.seg
+seg1[1] << bin_to_7seg:result_to_7seg.seg
+seg1[2] << bin_to_7seg:result_to_7seg.seg
+seg1[3] << bin_to_7seg:result_to_7seg.seg
+seg1[4] << bin_to_7seg:result_to_7seg.seg
+seg1[5] << bin_to_7seg:result_to_7seg.seg
+seg1[6] << bin_to_7seg:result_to_7seg.seg
+motor_pwm << pwm:pwm_inst.motor_pwm
+leds[0] << reg_Zero.DB_MAX_OUTPUT_PORT_TYPE
+leds[1] << reg_Carry.DB_MAX_OUTPUT_PORT_TYPE
+leds[2] << reg_Overflow.DB_MAX_OUTPUT_PORT_TYPE
+leds[3] << reg_Negative.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_module|FirtsDecoder_4to2bits:decoder_inst
-A => U3.IN0
-A => U7.IN1
-B => U3.IN1
-B => U7.IN2
-C => U3.IN2
-C => U5.IN0
-C => U4.IN0
-D => U5.IN1
-D => U4.IN1
-Y0 <= U3.DB_MAX_OUTPUT_PORT_TYPE
-Y1 <= U7.DB_MAX_OUTPUT_PORT_TYPE
+A => U5.IN0
+A => U6.IN0
+A => U8.IN0
+A => U9.IN0
+B => U6.IN1
+B => U8.IN1
+B => U9.IN1
+B => U5.IN1
+C => U6.IN2
+C => U9.IN2
+C => U5.IN2
+C => U8.IN2
+D => U5.IN3
+D => U6.IN3
+D => U8.IN3
+D => U9.IN3
+Y0 <= U7.DB_MAX_OUTPUT_PORT_TYPE
+Y1 <= U10.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_module|alu:alu_inst
@@ -212,16 +223,53 @@ motor_pwm <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_module|bin_to_7seg:result_to_7seg
-bin[0] => Decoder0.IN3
-bin[1] => Decoder0.IN2
-bin[2] => Decoder0.IN1
-bin[3] => Decoder0.IN0
-seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN0
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[1] => seg.IN0
+bin[1] => seg.IN1
+bin[1] => seg.IN0
+bin[1] => seg.IN1
+bin[1] => seg.IN1
+bin[1] => seg.IN0
+bin[1] => seg.IN1
+bin[1] => seg.IN1
+bin[1] => seg.IN0
+bin[1] => seg.IN1
+bin[1] => seg.IN1
+bin[2] => seg.IN1
+bin[2] => seg.IN0
+bin[2] => seg.IN0
+bin[2] => seg.IN0
+bin[2] => seg.IN1
+bin[2] => seg.IN0
+bin[3] => seg.IN1
+bin[3] => seg.IN1
+bin[3] => seg.IN1
+bin[3] => seg.IN1
+bin[3] => seg.IN1
+bin[3] => seg.IN1
+bin[3] => seg.IN1
+seg[0] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= seg.DB_MAX_OUTPUT_PORT_TYPE
 
 
