@@ -16,6 +16,7 @@ vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2F
 vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/bin_to_7seg.sv}
 vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/FirtsDecoder_4to2bits.sv}
 vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/reg_2bit.sv}
+vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/uart_rx.sv}
 
 vlog -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1 {C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/tb_top_module.sv}
 

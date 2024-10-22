@@ -1,5 +1,5 @@
-Analysis & Elaboration report for FAC_P1
-Mon Oct 21 19:07:58 2024
+Analysis & Synthesis report for FAC_P1
+Tue Oct 22 16:35:21 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,15 +7,31 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "bin_to_7seg:result_to_7seg"
-  6. Port Connectivity Checks: "alu:alu_inst|substractor_2bit:sub|full_adder_2bit:sub"
-  7. Port Connectivity Checks: "alu:alu_inst|substractor_2bit:sub|full_adder_2bit:add"
-  8. Port Connectivity Checks: "alu:alu_inst|substractor_2bit:sub"
-  9. Port Connectivity Checks: "alu:alu_inst|full_adder_2bit:add"
- 10. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |top_module|uart_rx:uart_receiver|state
+  9. Logic Cells Representing Combinational Loops
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: uart_rx:uart_receiver
+ 15. Parameter Settings for User Entity Instance: uart_tx:uart_transmitter
+ 16. Port Connectivity Checks: "bin_to_7seg:result_to_7seg"
+ 17. Port Connectivity Checks: "alu:alu_inst|substractor_2bit:sub|full_adder_2bit:sub"
+ 18. Port Connectivity Checks: "alu:alu_inst|substractor_2bit:sub|full_adder_2bit:add"
+ 19. Port Connectivity Checks: "alu:alu_inst|substractor_2bit:sub"
+ 20. Port Connectivity Checks: "alu:alu_inst|full_adder_2bit:add"
+ 21. Port Connectivity Checks: "alu:alu_inst"
+ 22. Port Connectivity Checks: "uart_tx:uart_transmitter"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+ 26. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -39,42 +55,31 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Mon Oct 21 19:07:58 2024       ;
-; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                 ; FAC_P1                                      ;
-; Top-level Entity Name         ; top_module                                  ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Oct 22 16:35:21 2024       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; FAC_P1                                      ;
+; Top-level Entity Name           ; top_module                                  ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 86                                          ;
+; Total pins                      ; 26                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -160,6 +165,200 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                           ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+; alu.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/alu.sv                   ;         ;
+; full_adder_2bit.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/full_adder_2bit.sv       ;         ;
+; unit_adder.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/unit_adder.sv            ;         ;
+; substractor_2bit.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/substractor_2bit.sv      ;         ;
+; ANDoperation_2bit.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/ANDoperation_2bit.sv     ;         ;
+; ORoperation_2bit.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/ORoperation_2bit.sv      ;         ;
+; pwm.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/pwm.sv                   ;         ;
+; top_module.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv            ;         ;
+; bin_to_7seg.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/bin_to_7seg.sv           ;         ;
+; FirtsDecoder_4to2bits.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/FirtsDecoder_4to2bits.sv ;         ;
+; reg_2bit.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/reg_2bit.sv              ;         ;
+; uart_rx.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/uart_rx.sv               ;         ;
+; uart_tx.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/uart_tx.sv               ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 77             ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 116            ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 26             ;
+;     -- 5 input functions                    ; 9              ;
+;     -- 4 input functions                    ; 10             ;
+;     -- <=3 input functions                  ; 71             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 86             ;
+;                                             ;                ;
+; I/O pins                                    ; 26             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; clk_uart~input ;
+; Maximum fan-out                             ; 84             ;
+; Total fan-out                               ; 806            ;
+; Average fan-out                             ; 3.17           ;
++---------------------------------------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                           ;
++-----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                 ; Entity Name           ; Library Name ;
++-----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------+-----------------------+--------------+
+; |top_module                             ; 116 (14)            ; 86 (12)                   ; 0                 ; 0          ; 26   ; 0            ; |top_module                                                                         ; top_module            ; work         ;
+;    |FirtsDecoder_4to2bits:decoder_inst| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|FirtsDecoder_4to2bits:decoder_inst                                      ; FirtsDecoder_4to2bits ; work         ;
+;    |alu:alu_inst|                       ; 7 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|alu:alu_inst                                                            ; alu                   ; work         ;
+;       |full_adder_2bit:add|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|alu:alu_inst|full_adder_2bit:add                                        ; full_adder_2bit       ; work         ;
+;          |unit_adder:adder0|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|alu:alu_inst|full_adder_2bit:add|unit_adder:adder0                      ; unit_adder            ; work         ;
+;       |substractor_2bit:sub|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|alu:alu_inst|substractor_2bit:sub                                       ; substractor_2bit      ; work         ;
+;          |full_adder_2bit:sub|          ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|alu:alu_inst|substractor_2bit:sub|full_adder_2bit:sub                   ; full_adder_2bit       ; work         ;
+;             |unit_adder:adder1|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|alu:alu_inst|substractor_2bit:sub|full_adder_2bit:sub|unit_adder:adder1 ; unit_adder            ; work         ;
+;    |bin_to_7seg:result_to_7seg|         ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|bin_to_7seg:result_to_7seg                                              ; bin_to_7seg           ; work         ;
+;    |pwm:pwm_inst|                       ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|pwm:pwm_inst                                                            ; pwm                   ; work         ;
+;    |reg_2bit:reg_inst|                  ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|reg_2bit:reg_inst                                                       ; reg_2bit              ; work         ;
+;    |uart_rx:uart_receiver|              ; 42 (42)             ; 41 (41)                   ; 0                 ; 0          ; 0    ; 0            ; |top_module|uart_rx:uart_receiver                                                   ; uart_rx               ; work         ;
+;    |uart_tx:uart_transmitter|           ; 34 (34)             ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |top_module|uart_tx:uart_transmitter                                                ; uart_tx               ; work         ;
++-----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------+
+; State Machine - |top_module|uart_rx:uart_receiver|state          ;
++-------------+------------+------------+-------------+------------+
+; Name        ; state.STOP ; state.DATA ; state.START ; state.IDLE ;
++-------------+------------+------------+-------------+------------+
+; state.IDLE  ; 0          ; 0          ; 0           ; 0          ;
+; state.START ; 0          ; 0          ; 1           ; 1          ;
+; state.DATA  ; 0          ; 1          ; 0           ; 1          ;
+; state.STOP  ; 1          ; 0          ; 0           ; 1          ;
++-------------+------------+------------+-------------+------------+
+
+
++------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops               ;
++--------------------------------------------------------+---+
+; Logic Cell Name                                        ;   ;
++--------------------------------------------------------+---+
+; pwm:pwm_inst|Add0~0                                    ;   ;
+; pwm:pwm_inst|Add0~1                                    ;   ;
+; pwm:pwm_inst|count~8                                   ;   ;
+; pwm:pwm_inst|count~9                                   ;   ;
+; pwm:pwm_inst|count~10                                  ;   ;
+; pwm:pwm_inst|count~11                                  ;   ;
+; pwm:pwm_inst|count~12                                  ;   ;
+; pwm:pwm_inst|count~13                                  ;   ;
+; pwm:pwm_inst|count~14                                  ;   ;
+; Number of logic cells representing combinational loops ; 9 ;
++--------------------------------------------------------+---+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; uart_tx:uart_transmitter|shift_reg[9] ; Stuck at VCC due to stuck port data_in ;
+; uart_rx:uart_receiver|state~8         ; Lost fanout                            ;
+; uart_rx:uart_receiver|state~9         ; Lost fanout                            ;
+; Total Number of Removed Registers = 3 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 86    ;
+; Number of registers using Synchronous Clear  ; 32    ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 77    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 74    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; uart_tx:uart_transmitter|tx            ; 2       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top_module|uart_tx:uart_transmitter|shift_reg[8]  ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_module|uart_tx:uart_transmitter|bit_count[3]  ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |top_module|uart_tx:uart_transmitter|baud_count[6] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top_module|uart_rx:uart_receiver|bit_count[1]     ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |top_module|uart_rx:uart_receiver|baud_count[15]   ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_module|pwm:pwm_inst|motor_speed[6]            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |top_module|pwm:pwm_inst|count[6]                  ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |top_module|uart_rx:uart_receiver|Selector4        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_rx:uart_receiver ;
++----------------+----------+----------------------------------------+
+; Parameter Name ; Value    ; Type                                   ;
++----------------+----------+----------------------------------------+
+; CLK_FREQ       ; 50000000 ; Signed Integer                         ;
+; BAUD_RATE      ; 9600     ; Signed Integer                         ;
++----------------+----------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_tx:uart_transmitter ;
++----------------+----------+-------------------------------------------+
+; Parameter Name ; Value    ; Type                                      ;
++----------------+----------+-------------------------------------------+
+; CLK_FREQ       ; 50000000 ; Signed Integer                            ;
+; BAUD_RATE      ; 9600     ; Signed Integer                            ;
++----------------+----------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "bin_to_7seg:result_to_7seg"                                                                                                                ;
 +------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
@@ -211,14 +410,73 @@ https://fpgasoftware.intel.com/eula.
 +---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:alu_inst"                                                                                                                                                                   ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; b    ; Input ; Warning  ; Input port expression (4 bits) is wider than the input port (2 bits) it drives.  The 2 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "uart_tx:uart_transmitter" ;
++------+--------+----------+---------------------------+
+; Port ; Type   ; Severity ; Details                   ;
++------+--------+----------+---------------------------+
+; busy ; Output ; Info     ; Explicitly unconnected    ;
++------+--------+----------+---------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 86                          ;
+;     CLR               ; 11                          ;
+;     ENA CLR           ; 34                          ;
+;     ENA CLR SCLR      ; 32                          ;
+;     ENA SLD           ; 8                           ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 120                         ;
+;     arith             ; 46                          ;
+;         1 data inputs ; 40                          ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 1                           ;
+;     normal            ; 74                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 17                          ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 9                           ;
+;         5 data inputs ; 9                           ;
+;         6 data inputs ; 26                          ;
+; boundary_port         ; 26                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.93                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Oct 21 19:07:48 2024
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FAC_P1 -c FAC_P1 --analysis_and_elaboration
+    Info: Processing started: Tue Oct 22 16:35:10 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FAC_P1 -c FAC_P1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Warning (10275): Verilog HDL Module Instantiation warning at alu.sv(26): ignored dangling comma in List of Port Connections File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/alu.sv Line: 26
@@ -237,36 +495,65 @@ Info (12021): Found 1 design units, including 1 entities, in source file oropera
 Info (12021): Found 1 design units, including 1 entities, in source file pwm.sv
     Info (12023): Found entity 1: pwm File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/pwm.sv Line: 16
 Info (12021): Found 1 design units, including 1 entities, in source file top_module.sv
-    Info (12023): Found entity 1: top_module File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 6
+    Info (12023): Found entity 1: top_module File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file tb_top_module.sv
-    Info (12023): Found entity 1: tb_top_module File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/tb_top_module.sv Line: 8
+    Info (12023): Found entity 1: tb_top_module File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/tb_top_module.sv Line: 145
 Info (12021): Found 1 design units, including 1 entities, in source file bin_to_7seg.sv
     Info (12023): Found entity 1: bin_to_7seg File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/bin_to_7seg.sv Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file firtsdecoder_4to2bits.sv
     Info (12023): Found entity 1: FirtsDecoder_4to2bits File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/FirtsDecoder_4to2bits.sv Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file reg_2bit.sv
     Info (12023): Found entity 1: reg_2bit File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/reg_2bit.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file uart_rx.sv
+    Info (12023): Found entity 1: uart_rx File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/uart_rx.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file uart_tx.sv
+    Info (12023): Found entity 1: uart_tx File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/uart_tx.sv Line: 1
 Info (12127): Elaborating entity "top_module" for the top level hierarchy
-Critical Warning (10237): Verilog HDL warning at top_module.sv(57): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 57
-Critical Warning (10237): Verilog HDL warning at top_module.sv(58): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 58
-Critical Warning (10237): Verilog HDL warning at top_module.sv(59): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 59
-Critical Warning (10237): Verilog HDL warning at top_module.sv(60): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 60
-Info (12128): Elaborating entity "FirtsDecoder_4to2bits" for hierarchy "FirtsDecoder_4to2bits:decoder_inst" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 32
-Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_inst" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 44
+Critical Warning (10237): Verilog HDL warning at top_module.sv(98): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 98
+Critical Warning (10237): Verilog HDL warning at top_module.sv(99): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 99
+Critical Warning (10237): Verilog HDL warning at top_module.sv(100): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 100
+Critical Warning (10237): Verilog HDL warning at top_module.sv(101): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 101
+Info (12128): Elaborating entity "uart_rx" for hierarchy "uart_rx:uart_receiver" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 48
+Warning (10230): Verilog HDL assignment warning at uart_rx.sv(47): truncated value with size 32 to match size of target (16) File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/uart_rx.sv Line: 47
+Warning (10230): Verilog HDL assignment warning at uart_rx.sv(54): truncated value with size 32 to match size of target (4) File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/uart_rx.sv Line: 54
+Warning (10230): Verilog HDL assignment warning at uart_rx.sv(59): truncated value with size 32 to match size of target (16) File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/uart_rx.sv Line: 59
+Warning (10230): Verilog HDL assignment warning at uart_rx.sv(71): truncated value with size 32 to match size of target (16) File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/uart_rx.sv Line: 71
+Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_tx:uart_transmitter" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 62
+Warning (10230): Verilog HDL assignment warning at uart_tx.sv(39): truncated value with size 32 to match size of target (4) File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/uart_tx.sv Line: 39
+Warning (10230): Verilog HDL assignment warning at uart_tx.sv(47): truncated value with size 32 to match size of target (16) File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/uart_tx.sv Line: 47
+Info (12128): Elaborating entity "FirtsDecoder_4to2bits" for hierarchy "FirtsDecoder_4to2bits:decoder_inst" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 73
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_inst" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 85
 Info (12128): Elaborating entity "full_adder_2bit" for hierarchy "alu:alu_inst|full_adder_2bit:add" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/alu.sv Line: 25
 Info (12128): Elaborating entity "unit_adder" for hierarchy "alu:alu_inst|full_adder_2bit:add|unit_adder:adder0" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/full_adder_2bit.sv Line: 15
 Info (12128): Elaborating entity "substractor_2bit" for hierarchy "alu:alu_inst|substractor_2bit:sub" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/alu.sv Line: 26
 Info (12128): Elaborating entity "ANDoperation_2bit" for hierarchy "alu:alu_inst|ANDoperation_2bit:andmodule" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/alu.sv Line: 27
 Info (12128): Elaborating entity "ORoperation_2bit" for hierarchy "alu:alu_inst|ORoperation_2bit:ormodule" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/alu.sv Line: 28
-Info (12128): Elaborating entity "reg_2bit" for hierarchy "reg_2bit:reg_inst" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 52
-Info (12128): Elaborating entity "pwm" for hierarchy "pwm:pwm_inst" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 69
+Info (12128): Elaborating entity "reg_2bit" for hierarchy "reg_2bit:reg_inst" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 93
+Info (12128): Elaborating entity "pwm" for hierarchy "pwm:pwm_inst" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 110
 Warning (10230): Verilog HDL assignment warning at pwm.sv(34): truncated value with size 32 to match size of target (8) File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/pwm.sv Line: 34
-Info (12128): Elaborating entity "bin_to_7seg" for hierarchy "bin_to_7seg:result_to_7seg" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 75
-Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4776 megabytes
-    Info: Processing ended: Mon Oct 21 19:07:58 2024
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:15
+Info (12128): Elaborating entity "bin_to_7seg" for hierarchy "bin_to_7seg:result_to_7seg" File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 116
+Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "seg1[1]" is stuck at GND File: C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/top_module.sv Line: 15
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/output_files/FAC_P1.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 172 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 15 output pins
+    Info (21061): Implemented 146 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 4807 megabytes
+    Info: Processing ended: Tue Oct 22 16:35:21 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:17
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/tenor/OneDrive/Documentos/Github/Proyecto2FAC/FAC_P1/output_files/FAC_P1.map.smsg.
 
 

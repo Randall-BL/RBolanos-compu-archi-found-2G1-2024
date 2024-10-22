@@ -81,8 +81,6 @@ set_location_assignment PIN_AC30 -to A
 set_location_assignment PIN_AB28 -to B
 set_location_assignment PIN_Y27 -to C
 set_location_assignment PIN_AB30 -to D
-set_location_assignment PIN_W25 -to alu_b[0]
-set_location_assignment PIN_V25 -to alu_b[1]
 set_location_assignment PIN_AC28 -to alu_op[0]
 set_location_assignment PIN_AD30 -to alu_op[1]
 set_location_assignment PIN_AA30 -to clk
@@ -99,4 +97,12 @@ set_location_assignment PIN_AF25 -to leds[0]
 set_location_assignment PIN_AG25 -to leds[1]
 set_location_assignment PIN_AD24 -to leds[2]
 set_location_assignment PIN_AC23 -to leds[3]
+set_global_assignment -name SYSTEMVERILOG_FILE uart_rx.sv
+set_location_assignment PIN_W15 -to rx
+set_location_assignment PIN_AC22 -to ledArduino[0]
+set_location_assignment PIN_AB22 -to ledArduino[1]
+set_global_assignment -name SYSTEMVERILOG_FILE uart_tx.sv
+set_location_assignment PIN_AF14 -to clk_uart
+set_location_assignment PIN_AK2 -to tx
+set_location_assignment PIN_W25 -to rst_uart
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

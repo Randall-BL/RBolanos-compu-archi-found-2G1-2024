@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "tx",
+					"strict" : false
+				},
+				{
 					"name" : "seg1[0]",
 					"strict" : false
 				},
@@ -48,6 +52,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "ledArduino[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ledArduino[1]",
+					"strict" : false
+				},
+				{
 					"name" : "rst",
 					"strict" : false
 				},
@@ -56,7 +68,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "alu_b[0]",
+					"name" : "alu_op[0]",
 					"strict" : false
 				},
 				{
@@ -76,15 +88,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "alu_op[0]",
+					"name" : "clk_uart",
 					"strict" : false
 				},
 				{
-					"name" : "alu_b[1]",
+					"name" : "rst_uart",
 					"strict" : false
 				},
 				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rx",
 					"strict" : false
 				}
 			]

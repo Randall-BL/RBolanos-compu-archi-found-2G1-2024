@@ -17,7 +17,7 @@ void setup() {
 
 void loop() {
   // Dato de prueba que se va a enviar (4 bits menos significativos)
-  byte dataToSend = 0b1010;  // Ejemplo de dato a enviar (4 bits)
+  byte dataToSend = 0b11;  // Ejemplo de dato a enviar (4 bits)
 
   // Enviar el dato por UART (TX pin 1)
   Serial.write(dataToSend);
@@ -32,7 +32,7 @@ void loop() {
       byte receivedData = Serial.read();
 
       // Verificar si el dato recibido es igual al enviado
-      if (receivedData == dataToSend) {
+      if (receivedData == dataToSend+1) {
         // Si los datos coinciden, encender el LED
         digitalWrite(LED_BUILTIN, HIGH);
       } else {
