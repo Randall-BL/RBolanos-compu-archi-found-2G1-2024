@@ -1,0 +1,481 @@
+|top_module
+clk => clk.IN2
+clk_uart => clk_uart.IN2
+rst => rst.IN2
+rst_uart => rst_uart.IN2
+A => A.IN1
+B => B.IN1
+C => C.IN1
+D => D.IN1
+rx => rx.IN1
+tx << uart_tx:uart_transmitter.tx
+alu_op[0] => alu_op[0].IN1
+alu_op[1] => alu_op[1].IN1
+seg1[0] << bin_to_7seg:result_to_7seg.seg
+seg1[1] << bin_to_7seg:result_to_7seg.seg
+seg1[2] << bin_to_7seg:result_to_7seg.seg
+seg1[3] << bin_to_7seg:result_to_7seg.seg
+seg1[4] << bin_to_7seg:result_to_7seg.seg
+seg1[5] << bin_to_7seg:result_to_7seg.seg
+seg1[6] << bin_to_7seg:result_to_7seg.seg
+motor_pwm << pwm:pwm_inst.motor_pwm
+leds[0] << reg_Zero.DB_MAX_OUTPUT_PORT_TYPE
+leds[1] << reg_Carry.DB_MAX_OUTPUT_PORT_TYPE
+leds[2] << reg_Overflow.DB_MAX_OUTPUT_PORT_TYPE
+leds[3] << reg_Negative.DB_MAX_OUTPUT_PORT_TYPE
+ledArduino[0] << ledArduino[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ledArduino[1] << ledArduino[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|uart_rx:uart_receiver
+clk => data[0]~reg0.CLK
+clk => data[1]~reg0.CLK
+clk => data[2]~reg0.CLK
+clk => data[3]~reg0.CLK
+clk => data[4]~reg0.CLK
+clk => data[5]~reg0.CLK
+clk => data[6]~reg0.CLK
+clk => data[7]~reg0.CLK
+clk => valid~reg0.CLK
+clk => shift_reg[0].CLK
+clk => shift_reg[1].CLK
+clk => shift_reg[2].CLK
+clk => shift_reg[3].CLK
+clk => shift_reg[4].CLK
+clk => shift_reg[5].CLK
+clk => shift_reg[6].CLK
+clk => shift_reg[7].CLK
+clk => bit_count[0].CLK
+clk => bit_count[1].CLK
+clk => bit_count[2].CLK
+clk => bit_count[3].CLK
+clk => baud_count[0].CLK
+clk => baud_count[1].CLK
+clk => baud_count[2].CLK
+clk => baud_count[3].CLK
+clk => baud_count[4].CLK
+clk => baud_count[5].CLK
+clk => baud_count[6].CLK
+clk => baud_count[7].CLK
+clk => baud_count[8].CLK
+clk => baud_count[9].CLK
+clk => baud_count[10].CLK
+clk => baud_count[11].CLK
+clk => baud_count[12].CLK
+clk => baud_count[13].CLK
+clk => baud_count[14].CLK
+clk => baud_count[15].CLK
+clk => state~5.DATAIN
+rst_n => data[0]~reg0.ACLR
+rst_n => data[1]~reg0.ACLR
+rst_n => data[2]~reg0.ACLR
+rst_n => data[3]~reg0.ACLR
+rst_n => data[4]~reg0.ACLR
+rst_n => data[5]~reg0.ACLR
+rst_n => data[6]~reg0.ACLR
+rst_n => data[7]~reg0.ACLR
+rst_n => valid~reg0.ACLR
+rst_n => shift_reg[0].ACLR
+rst_n => shift_reg[1].ACLR
+rst_n => shift_reg[2].ACLR
+rst_n => shift_reg[3].ACLR
+rst_n => shift_reg[4].ACLR
+rst_n => shift_reg[5].ACLR
+rst_n => shift_reg[6].ACLR
+rst_n => shift_reg[7].ACLR
+rst_n => bit_count[0].ACLR
+rst_n => bit_count[1].ACLR
+rst_n => bit_count[2].ACLR
+rst_n => bit_count[3].ACLR
+rst_n => baud_count[0].ACLR
+rst_n => baud_count[1].ACLR
+rst_n => baud_count[2].ACLR
+rst_n => baud_count[3].ACLR
+rst_n => baud_count[4].ACLR
+rst_n => baud_count[5].ACLR
+rst_n => baud_count[6].ACLR
+rst_n => baud_count[7].ACLR
+rst_n => baud_count[8].ACLR
+rst_n => baud_count[9].ACLR
+rst_n => baud_count[10].ACLR
+rst_n => baud_count[11].ACLR
+rst_n => baud_count[12].ACLR
+rst_n => baud_count[13].ACLR
+rst_n => baud_count[14].ACLR
+rst_n => baud_count[15].ACLR
+rst_n => state~7.DATAIN
+rx => shift_reg.DATAB
+rx => data.OUTPUTSELECT
+rx => data.OUTPUTSELECT
+rx => data.OUTPUTSELECT
+rx => data.OUTPUTSELECT
+rx => data.OUTPUTSELECT
+rx => data.OUTPUTSELECT
+rx => data.OUTPUTSELECT
+rx => data.OUTPUTSELECT
+rx => valid.OUTPUTSELECT
+rx => state.OUTPUTSELECT
+rx => state.OUTPUTSELECT
+rx => state.OUTPUTSELECT
+rx => state.OUTPUTSELECT
+rx => state.OUTPUTSELECT
+rx => state.OUTPUTSELECT
+rx => state.OUTPUTSELECT
+rx => state.OUTPUTSELECT
+rx => baud_count.OUTPUTSELECT
+rx => baud_count.OUTPUTSELECT
+rx => baud_count.OUTPUTSELECT
+rx => baud_count.OUTPUTSELECT
+rx => baud_count.OUTPUTSELECT
+rx => baud_count.OUTPUTSELECT
+rx => baud_count.OUTPUTSELECT
+rx => baud_count.OUTPUTSELECT
+rx => baud_count.OUTPUTSELECT
+rx => baud_count.OUTPUTSELECT
+rx => baud_count.OUTPUTSELECT
+rx => baud_count.OUTPUTSELECT
+rx => baud_count.OUTPUTSELECT
+rx => baud_count.OUTPUTSELECT
+rx => baud_count.OUTPUTSELECT
+rx => baud_count.OUTPUTSELECT
+data[0] <= data[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[1] <= data[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[2] <= data[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[3] <= data[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[4] <= data[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[5] <= data[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[6] <= data[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[7] <= data[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+valid <= valid~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|uart_tx:uart_transmitter
+clk => shift_reg[0].CLK
+clk => shift_reg[1].CLK
+clk => shift_reg[2].CLK
+clk => shift_reg[3].CLK
+clk => shift_reg[4].CLK
+clk => shift_reg[5].CLK
+clk => shift_reg[6].CLK
+clk => shift_reg[7].CLK
+clk => shift_reg[8].CLK
+clk => shift_reg[9].CLK
+clk => transmitting.CLK
+clk => busy~reg0.CLK
+clk => bit_count[0].CLK
+clk => bit_count[1].CLK
+clk => bit_count[2].CLK
+clk => bit_count[3].CLK
+clk => baud_count[0].CLK
+clk => baud_count[1].CLK
+clk => baud_count[2].CLK
+clk => baud_count[3].CLK
+clk => baud_count[4].CLK
+clk => baud_count[5].CLK
+clk => baud_count[6].CLK
+clk => baud_count[7].CLK
+clk => baud_count[8].CLK
+clk => baud_count[9].CLK
+clk => baud_count[10].CLK
+clk => baud_count[11].CLK
+clk => baud_count[12].CLK
+clk => baud_count[13].CLK
+clk => baud_count[14].CLK
+clk => baud_count[15].CLK
+clk => tx~reg0.CLK
+rst_n => transmitting.ACLR
+rst_n => busy~reg0.ACLR
+rst_n => bit_count[0].ACLR
+rst_n => bit_count[1].ACLR
+rst_n => bit_count[2].ACLR
+rst_n => bit_count[3].ACLR
+rst_n => baud_count[0].ACLR
+rst_n => baud_count[1].ACLR
+rst_n => baud_count[2].ACLR
+rst_n => baud_count[3].ACLR
+rst_n => baud_count[4].ACLR
+rst_n => baud_count[5].ACLR
+rst_n => baud_count[6].ACLR
+rst_n => baud_count[7].ACLR
+rst_n => baud_count[8].ACLR
+rst_n => baud_count[9].ACLR
+rst_n => baud_count[10].ACLR
+rst_n => baud_count[11].ACLR
+rst_n => baud_count[12].ACLR
+rst_n => baud_count[13].ACLR
+rst_n => baud_count[14].ACLR
+rst_n => baud_count[15].ACLR
+rst_n => tx~reg0.PRESET
+rst_n => shift_reg[0].ENA
+rst_n => shift_reg[9].ENA
+rst_n => shift_reg[8].ENA
+rst_n => shift_reg[7].ENA
+rst_n => shift_reg[6].ENA
+rst_n => shift_reg[5].ENA
+rst_n => shift_reg[4].ENA
+rst_n => shift_reg[3].ENA
+rst_n => shift_reg[2].ENA
+rst_n => shift_reg[1].ENA
+data_in[0] => shift_reg.DATAB
+data_in[1] => shift_reg.DATAB
+data_in[2] => shift_reg.DATAB
+data_in[3] => shift_reg.DATAB
+data_in[4] => shift_reg.DATAB
+data_in[5] => shift_reg.DATAB
+data_in[6] => shift_reg.DATAB
+data_in[7] => shift_reg.DATAB
+send => always0.IN1
+tx <= tx~reg0.DB_MAX_OUTPUT_PORT_TYPE
+busy <= busy~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|FirtsDecoder_4to2bits:decoder_inst
+A => U5.IN0
+A => U6.IN0
+A => U8.IN0
+A => U9.IN0
+B => U6.IN1
+B => U8.IN1
+B => U9.IN1
+B => U5.IN1
+C => U6.IN2
+C => U9.IN2
+C => U5.IN2
+C => U8.IN2
+D => U5.IN3
+D => U6.IN3
+D => U8.IN3
+D => U9.IN3
+Y0 <= U7.DB_MAX_OUTPUT_PORT_TYPE
+Y1 <= U10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|alu:alu_inst
+select[0] => res.IN0
+select[0] => res.IN0
+select[0] => res.IN0
+select[0] => res.IN0
+select[1] => res.IN1
+select[1] => res.IN1
+select[1] => res.IN1
+select[1] => res.IN1
+a[0] => a[0].IN4
+a[1] => a[1].IN4
+b[0] => b[0].IN4
+b[1] => b[1].IN4
+result[0] <= res.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= res.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+V <= V.DB_MAX_OUTPUT_PORT_TYPE
+S <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|alu:alu_inst|full_adder_2bit:add
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+cin => c[0].IN1
+sum[0] <= unit_adder:adder0.port3
+sum[1] <= unit_adder:adder1.port3
+cout <= unit_adder:adder1.port4
+
+
+|top_module|alu:alu_inst|full_adder_2bit:add|unit_adder:adder0
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|alu:alu_inst|full_adder_2bit:add|unit_adder:adder1
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|alu:alu_inst|substractor_2bit:sub
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+b[0] => inverted[0].IN1
+b[1] => inverted[1].IN1
+result[0] <= full_adder_2bit:sub.port3
+result[1] <= full_adder_2bit:sub.port3
+sign <= full_adder_2bit:sub.port4
+
+
+|top_module|alu:alu_inst|substractor_2bit:sub|full_adder_2bit:add
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+cin => c[0].IN1
+sum[0] <= unit_adder:adder0.port3
+sum[1] <= unit_adder:adder1.port3
+cout <= unit_adder:adder1.port4
+
+
+|top_module|alu:alu_inst|substractor_2bit:sub|full_adder_2bit:add|unit_adder:adder0
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|alu:alu_inst|substractor_2bit:sub|full_adder_2bit:add|unit_adder:adder1
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|alu:alu_inst|substractor_2bit:sub|full_adder_2bit:sub
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+cin => c[0].IN1
+sum[0] <= unit_adder:adder0.port3
+sum[1] <= unit_adder:adder1.port3
+cout <= unit_adder:adder1.port4
+
+
+|top_module|alu:alu_inst|substractor_2bit:sub|full_adder_2bit:sub|unit_adder:adder0
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|alu:alu_inst|substractor_2bit:sub|full_adder_2bit:sub|unit_adder:adder1
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|alu:alu_inst|ANDoperation_2bit:andmodule
+a[0] => result.IN0
+a[1] => result.IN0
+b[0] => result.IN1
+b[1] => result.IN1
+result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|alu:alu_inst|ORoperation_2bit:ormodule
+a[0] => result.IN0
+a[1] => result.IN0
+b[0] => result.IN1
+b[1] => result.IN1
+result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|reg_2bit:reg_inst
+clk => q~1.CLK
+clk => q~0.CLK
+rst => q~1.ACLR
+rst => q~0.ACLR
+d[0] => q~1.DATAIN
+d[1] => q~0.DATAIN
+q[0] <= q~1.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|pwm:pwm_inst
+clk => ~NO_FANOUT~
+rst => count[7].OUTPUTSELECT
+rst => count[6].OUTPUTSELECT
+rst => count[5].OUTPUTSELECT
+rst => count[4].OUTPUTSELECT
+rst => count[3].OUTPUTSELECT
+rst => count[2].OUTPUTSELECT
+rst => count[1].OUTPUTSELECT
+rst => count[0].OUTPUTSELECT
+speed[0] => Equal0.IN1
+speed[0] => Equal1.IN1
+speed[0] => Equal2.IN0
+speed[1] => Equal0.IN0
+speed[1] => Equal1.IN0
+speed[1] => Equal2.IN1
+motor_pwm <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|bin_to_7seg:result_to_7seg
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN0
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[0] => seg.IN1
+bin[1] => seg.IN0
+bin[1] => seg.IN1
+bin[1] => seg.IN0
+bin[1] => seg.IN1
+bin[1] => seg.IN1
+bin[1] => seg.IN0
+bin[1] => seg.IN1
+bin[1] => seg.IN1
+bin[1] => seg.IN0
+bin[1] => seg.IN1
+bin[1] => seg.IN1
+bin[2] => seg.IN1
+bin[2] => seg.IN0
+bin[2] => seg.IN0
+bin[2] => seg.IN0
+bin[2] => seg.IN1
+bin[2] => seg.IN0
+bin[3] => seg.IN1
+bin[3] => seg.IN1
+bin[3] => seg.IN1
+bin[3] => seg.IN1
+bin[3] => seg.IN1
+bin[3] => seg.IN1
+bin[3] => seg.IN1
+seg[0] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+
+

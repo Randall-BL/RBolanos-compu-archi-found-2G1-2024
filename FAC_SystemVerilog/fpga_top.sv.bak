@@ -1,0 +1,28 @@
+module fpga_top (
+    input wire clk,          // Reloj del sistema
+    input wire rst_n,        // Reset
+    input wire rx,           // Señal RX de UART
+    output reg [3:0] leds    // LEDs de la FPGA
+);
+
+    wire [3:0] uart_data;
+    wire valid;
+
+    // Instancia del receptor UART
+    uart_rx uart_receiver (
+        .clk(clk),
+        .rst_n(rst_n),
+        .rx(rx),
+        .data(uart_data),
+        .valid(valid)
+    );
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            leds <= 4'b0000;
+        end else if (valid) begin
+            // Encender los LEDs según el dato recibido
+            leds <= uart_data;
+        end
+    end
+endmodule

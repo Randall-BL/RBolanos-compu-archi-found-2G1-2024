@@ -1,0 +1,53 @@
+module uart_rx (
+    input wire clk,          // Reloj del sistema
+    input wire rst_n,        // Reset
+    input wire rx,           // Señal de entrada RX (UART)
+    output reg [3:0] data,   // Datos recibidos (4 bits)
+    output reg valid         // Señal de validez
+);
+
+    // Parámetros para UART
+    parameter CLK_FREQ = 50000000;  // Frecuencia de reloj (50 MHz)
+    parameter BAUD_RATE = 9600;     // Velocidad de UART
+    localparam BAUD_TICK = CLK_FREQ / BAUD_RATE;
+
+    reg [15:0] baud_count;
+    reg [3:0] bit_count;
+    reg [7:0] shift_reg;
+    reg receiving;
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            baud_count <= 0;
+            bit_count <= 0;
+            shift_reg <= 0;
+            receiving <= 0;
+            valid <= 0;
+        end else begin
+            if (!receiving) begin
+                // Esperar el bit de start
+                if (!rx) begin
+                    receiving <= 1;
+                    baud_count <= BAUD_TICK / 2;
+                end
+            end else begin
+                if (baud_count == BAUD_TICK - 1) begin
+                    baud_count <= 0;
+
+                    if (bit_count < 8) begin
+                        shift_reg <= {rx, shift_reg[7:1]};
+                        bit_count <= bit_count + 1;
+                    end else begin
+                        // Transferencia completa
+                        data <= shift_reg[3:0];
+                        valid <= 1;
+                        receiving <= 0;
+                        bit_count <= 0;
+                    end
+                end else begin
+                    baud_count <= baud_count + 1;
+                end
+            end
+        end
+    end
+endmodule
