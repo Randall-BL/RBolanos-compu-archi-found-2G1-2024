@@ -33,7 +33,7 @@ module fpga_top (
     );
 
     // Procesamiento de datos y control de LEDs
-    assign uart_data_rx = uart_data_full_rx[3:0];  // Solo los 4 bits menos significativos
+    assign uart_data_rx = uart_data_full_rx[1:0];  // Solo los 4 bits menos significativos
 
     wire valid_edge;
     assign valid_edge = valid_rx & ~valid_rx_d;
