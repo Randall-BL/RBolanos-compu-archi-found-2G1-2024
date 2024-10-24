@@ -1,0 +1,28 @@
+module pwm(
+    input logic clk,
+    input logic rst,
+    input logic [1:0] speed,    // Velocidad de entrada de 2 bits (salida de la ALU)
+    output logic motor_pwm
+);
+
+    logic [7:0] count = 8'h00;
+    logic [7:0] motor_speed;
+    logic motor_on;
+
+    // Asignar el valor de velocidad usando operaciones estructurales y el operador ternario
+    always_comb begin
+        motor_speed = (speed == 2'b11) ? 8'hFF :         // 100% (255)
+                      (speed == 2'b10) ? 8'hC0 :         // 75% (192)
+                      (speed == 2'b01) ? 8'h80 :         // 50% (128)
+                      8'h40;                             // 25% (64)
+    end
+
+    // Control del motor mediante PWM usando lógica estructural
+    always_ff @(posedge clk or negedge rst) begin
+        count <= (!rst) ? 8'h00 : (count == 8'hFF) ? 8'h00 : count + 1;
+        motor_on <= (count < motor_speed) ? 1'b1 : 1'b0;  // Generación de la señal PWM
+    end
+
+    assign motor_pwm = motor_on;
+
+endmodule

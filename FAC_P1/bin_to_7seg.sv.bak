@@ -1,0 +1,45 @@
+module bin_to_7seg (
+    input logic [3:0] bin,   // Entrada de 4 bits
+    output logic [6:0] seg   // Salidas para los 7 segmentos (a-g)
+);
+
+    // Segmento a
+    assign seg[6] = (~bin[3] & ~bin[2] & ~bin[1] & bin[0]) | 
+                    (~bin[3] & bin[2] & ~bin[1] & ~bin[0]) | 
+                    (bin[3] & ~bin[2] & bin[1] & bin[0]) | 
+                    (bin[3] & bin[2] & ~bin[1] & bin[0]);
+
+    // Segmento b
+    assign seg[5] = (~bin[3] & bin[2] & ~bin[1] & bin[0]) | 
+                    (bin[2] & bin[1] & ~bin[0]) | 
+                    (bin[3] & bin[1] & bin[0]) | 
+                    (bin[3] & bin[2] & ~bin[0]);
+
+    // Segmento c
+    assign seg[4] = (~bin[3] & ~bin[2] & bin[1] & ~bin[0]) | 
+                    (bin[3] & bin[2] & ~bin[0]) | 
+                    (bin[3] & bin[2] & bin[1]);
+
+    // Segmento d
+    assign seg[3] = (~bin[3] & ~bin[2] & ~bin[1] & bin[0]) | 
+                    (~bin[3] & bin[2] & ~bin[1] & ~bin[0]) | 
+                    (bin[2] & bin[1] & bin[0]) | 
+                    (bin[3] & ~bin[2] & bin[1] & ~bin[0]);
+
+    // Segmento e
+    assign seg[2] = (~bin[3] & bin[0]) | 
+                    (~bin[3] & bin[2] & ~bin[1]) | 
+                    (~bin[2] & ~bin[1] & bin[0]);
+
+    // Segmento f
+    assign seg[1] = (~bin[3] & ~bin[2] & bin[0]) | 
+                    (~bin[3] & ~bin[2] & bin[1]) | 
+                    (~bin[3] & bin[1] & bin[0]) | 
+                    (bin[3] & bin[2] & ~bin[1] & bin[0]);
+
+    // Segmento g
+    assign seg[0] = (~bin[3] & ~bin[2] & ~bin[1]) | 
+                    (bin[3] & bin[2] & ~bin[1] & ~bin[0]) | 
+                    (~bin[3] & bin[2] & bin[1] & bin[0]);
+
+endmodule
