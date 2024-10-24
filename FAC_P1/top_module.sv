@@ -1,6 +1,6 @@
 
 
-//
+// MODULO PRINCIPAL
 
 module top_module(
     input logic clk,
@@ -23,7 +23,7 @@ module top_module(
     logic [1:0] reg_out;      // Salida del registro
     logic Zero, Carry, Overflow, Negative;         // Señales de las banderas (Zero, Carry, Overflow, Signo)
 	 logic reg_Zero, reg_Carry, reg_Overflow, reg_Negative; // Registros de las flags
-	 
+
 	 
 	 wire [7:0] uart_data_full_rx;  // Datos recibidos por UART (desde Arduino)
     wire [3:0] uart_data_rx;       // Solo los 4 bits menos significativos de los datos recibidos
@@ -33,11 +33,6 @@ module top_module(
     reg valid_rx_d;                // Registro para almacenar valid anterior
 	 
 	 
-	 // Procesamiento de datos y control de LEDs
-	 
-    //assign uart_data_rx = uart_data_full_rx[1:0];  // Solo los 4 bits menos significativos
-
-	 //
 	 
 	 uart_rx uart_receiver (
         .clk(clk_uart),
@@ -48,6 +43,7 @@ module top_module(
     );
 	 
 	 
+	 // Procesamiento de datos y control de LEDs
 	 assign uart_data_rx = uart_data_full_rx[3:0];
 		
 		
@@ -103,7 +99,7 @@ module top_module(
 
     // Instancia del PWM, utilizando el resultado de la ALU como la velocidad
     pwm pwm_inst (
-        .clk(clk),
+        .clk(clk_uart),
         .rst(rst),
         .speed(reg_out),   // El resultado de la ALU y registro controla la velocidad del motor
         .motor_pwm(motor_pwm)
@@ -121,6 +117,8 @@ module top_module(
     assign leds[2] = reg_Overflow;  // LED para Overflow flag
     assign leds[3] = reg_Negative;  // LED para Sign flag
 	 
+	 
+	// BLOQUE SECUENCIAL PARTE DE LA COMUNICACION UART
 	 
 	always @(posedge clk_uart or negedge rst_uart) begin
         if (!rst_uart) begin

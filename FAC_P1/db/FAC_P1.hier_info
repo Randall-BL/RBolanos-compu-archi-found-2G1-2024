@@ -1,6 +1,6 @@
 |top_module
-clk => clk.IN2
-clk_uart => clk_uart.IN2
+clk => clk.IN1
+clk_uart => clk_uart.IN3
 rst => rst.IN2
 rst_uart => rst_uart.IN2
 A => A.IN1
@@ -410,15 +410,22 @@ q[1] <= q~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_module|pwm:pwm_inst
-clk => ~NO_FANOUT~
-rst => count[7].OUTPUTSELECT
-rst => count[6].OUTPUTSELECT
-rst => count[5].OUTPUTSELECT
-rst => count[4].OUTPUTSELECT
-rst => count[3].OUTPUTSELECT
-rst => count[2].OUTPUTSELECT
-rst => count[1].OUTPUTSELECT
-rst => count[0].OUTPUTSELECT
+clk => count~7.CLK
+clk => count~0.CLK
+clk => count~1.CLK
+clk => count~2.CLK
+clk => count~3.CLK
+clk => count~4.CLK
+clk => count~5.CLK
+clk => count~6.CLK
+rst => count~7.ACLR
+rst => count~0.ACLR
+rst => count~1.ACLR
+rst => count~2.ACLR
+rst => count~3.ACLR
+rst => count~4.ACLR
+rst => count~5.ACLR
+rst => count~6.ACLR
 speed[0] => Equal0.IN1
 speed[0] => Equal1.IN1
 speed[0] => Equal2.IN0

@@ -1,5 +1,5 @@
 
-//// ALU 2 BITS
+/// ALU 2 BITS
 
 module alu(
     input  logic [1:0] select,   // Selector de operación
@@ -52,7 +52,6 @@ assign S = res[1];
 assign result = res;
 
 endmodule
-
 
 
 //
