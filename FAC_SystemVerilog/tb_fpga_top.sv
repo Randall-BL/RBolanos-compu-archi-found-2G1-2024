@@ -1,7 +1,5 @@
 `timescale 1ns / 1ps
-
 module tb_fpga_top;
-
     reg clk;             // Señal de reloj
     reg rst_n;           // Señal de reset (activo en bajo)
     reg rx;              // Entrada RX desde el Arduino (simulada)
@@ -39,6 +37,9 @@ module tb_fpga_top;
         // Esperar a que se procese y envíe de vuelta el dato
         #1041670;  // Tiempo necesario para enviar/recibir un byte completo a 9600 baudios
 
+        // Dar más tiempo para la actualización de los LEDs y procesamiento
+        #2000000;
+
         // Simular la recepción de datos UART (ejemplo: 8 bits "10101010")
         #100000;
         $display("Simulación de la recepción de '10101010'");
@@ -47,9 +48,12 @@ module tb_fpga_top;
         // Esperar a que se procese y envíe de vuelta el dato
         #1041670;
 
+        // Dar más tiempo para la actualización de los LEDs y procesamiento
+        #2000000;
+
         // Finalizar la simulación
         #100000;
-        $stop;
+        $finish;
     end
 
     // Tarea para simular la recepción UART (9600 baudios, 8 bits de datos, sin paridad, 1 bit de parada)
@@ -77,5 +81,29 @@ module tb_fpga_top;
         $monitor("Tiempo %t: LEDs = %b, TX = %b", $time, leds, tx);
     end
 
-endmodule
+    // Tarea para capturar y mostrar los datos transmitidos por TX
+    task capture_tx;
+        reg [7:0] captured_data;
+        integer i;
+        begin
+            @(negedge tx);  // Esperar al bit de inicio
+            #(104167/2);  // Mover al centro del bit de inicio
 
+            for (i = 0; i < 8; i = i + 1) begin
+                #104167;
+                captured_data[i] = tx;
+            end
+
+            #104167;  // Esperar el bit de parada
+            $display("Tiempo %t: Dato capturado en TX = %b", $time, captured_data);
+        end
+    endtask
+
+    // Proceso para capturar datos de TX
+    initial begin
+        forever begin
+            capture_tx;
+        end
+    end
+
+endmodule

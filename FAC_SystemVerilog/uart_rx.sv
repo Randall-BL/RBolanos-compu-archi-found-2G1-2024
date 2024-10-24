@@ -14,7 +14,6 @@ module uart_rx (
     reg [15:0] baud_count;   // Contador para los ticks del baudrate
     reg [3:0] bit_count;     // Contador de los bits recibidos
     reg [7:0] shift_reg;     // Registro de desplazamiento para recibir los bits
-    reg receiving;           // Estado de recepción
     reg [1:0] state;         // Estado de la recepción UART
 
     localparam IDLE = 2'b00;
@@ -27,7 +26,6 @@ module uart_rx (
             baud_count <= 0;
             bit_count <= 0;
             shift_reg <= 0;
-            receiving <= 0;
             valid <= 0;
             data <= 0;
             state <= IDLE;

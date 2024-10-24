@@ -1,0 +1,15 @@
+
+// Decodificador a 2 bits
+// Por ejemplo suma 11 + 11 = 110
+// Result = 10-> 2
+
+module decoder_its (
+    input logic [3:0] in,   // Entrada de 4 bits o más
+    output logic [1:0] out  // Salida de 2 bits
+);
+
+    // Asignar los bits menos significativos a la salida
+    assign out[0] = in[0];  // Bit menos significativo
+    assign out[1] = in[1];  // Segundo bit menos significativo
+
+endmodule

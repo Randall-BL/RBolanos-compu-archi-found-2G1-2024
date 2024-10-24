@@ -8,108 +8,108 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/tenor/OneDrive/Documentos/FAC_tarea/simulation/modelsim
+Z0 dC:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/simulation/modelsim
 vfpga_top
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1728932704
+Z2 !s110 1729450449
 !i10b 1
-!s100 _R`f2`UgePIhH==NfE5EW0
+!s100 eBVCV1?hCNQdn15lVQjA>2
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I4af^>4ic1c;Rj2CiERRnJ3
+IYmg1gbdN[c57UBFb`M7mO2
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1728932682
-8C:/Users/tenor/OneDrive/Documentos/FAC_tarea/fpga_top.sv
-FC:/Users/tenor/OneDrive/Documentos/FAC_tarea/fpga_top.sv
+w1729450027
+8C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv
+FC:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv
 !i122 1
-L0 1 60
+L0 2 60
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1728932704.000000
-!s107 C:/Users/tenor/OneDrive/Documentos/FAC_tarea/fpga_top.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_tarea|C:/Users/tenor/OneDrive/Documentos/FAC_tarea/fpga_top.sv|
+Z6 !s108 1729450449.000000
+!s107 C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog|C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/fpga_top.sv|
 !i113 1
 Z7 o-sv -work work
-Z8 !s92 -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/FAC_tarea
+Z8 !s92 -sv -work work +incdir+C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog
 Z9 tCvgOpt 0
 vtb_fpga_top
 R1
-R2
+Z10 !s110 1729450450
 !i10b 1
-!s100 _8:XmGZ4bgO]di1oi;f^31
+!s100 B^Woj8nM>2Tf15^fl8:be3
 R3
-IM4h<XjF;W5H5FCl5hCNES3
+IV4Y_M7AP:4IQ]BSjZ_ZXH3
 R4
 S1
 R0
-w1728931993
-8C:/Users/tenor/OneDrive/Documentos/FAC_tarea/tb_fpga_top.sv
-FC:/Users/tenor/OneDrive/Documentos/FAC_tarea/tb_fpga_top.sv
+w1729450407
+8C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/tb_fpga_top.sv
+FC:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/tb_fpga_top.sv
 !i122 3
-L0 3 78
+L0 2 108
 R5
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/tenor/OneDrive/Documentos/FAC_tarea/tb_fpga_top.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_tarea|C:/Users/tenor/OneDrive/Documentos/FAC_tarea/tb_fpga_top.sv|
+!s108 1729450450.000000
+!s107 C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/tb_fpga_top.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog|C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/tb_fpga_top.sv|
 !i113 1
 R7
 R8
 R9
 vuart_rx
 R1
-!s110 1728932703
+R2
 !i10b 1
-!s100 T]XbgnASNXf`CkmeaHX0f0
+!s100 MU?2KGh>Zd4AUCd60?93D1
 R3
-I6=?hK2`:b2N<BV<SRMh6I3
+I_aWl?GKCkV:OBlH]VEDzT0
 R4
 S1
 R0
-w1728929458
-8C:/Users/tenor/OneDrive/Documentos/FAC_tarea/uart_rx.sv
-FC:/Users/tenor/OneDrive/Documentos/FAC_tarea/uart_rx.sv
+w1729450145
+8C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/uart_rx.sv
+FC:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/uart_rx.sv
 !i122 0
-L0 1 79
+L0 1 123
 R5
 r1
 !s85 0
 31
-!s108 1728932703.000000
-!s107 C:/Users/tenor/OneDrive/Documentos/FAC_tarea/uart_rx.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_tarea|C:/Users/tenor/OneDrive/Documentos/FAC_tarea/uart_rx.sv|
+R6
+!s107 C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/uart_rx.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog|C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/uart_rx.sv|
 !i113 1
 R7
 R8
 R9
 vuart_tx
 R1
-R2
+R10
 !i10b 1
-!s100 P0e_DSoPA9=NXl]ahz[dO3
+!s100 z:ZOMlDb=C;FkzgQH`A7_2
 R3
-I5ZN]l3TnUbL_i[17EmIPY3
+IIa1mAD?VY1D;9:ni]D4Rn1
 R4
 S1
 R0
-w1728931726
-8C:/Users/tenor/OneDrive/Documentos/FAC_tarea/output_files/uart_tx.sv
-FC:/Users/tenor/OneDrive/Documentos/FAC_tarea/output_files/uart_tx.sv
+w1729421883
+8C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files/uart_tx.sv
+FC:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files/uart_tx.sv
 !i122 2
-L0 1 51
+L0 1 125
 R5
 r1
 !s85 0
 31
 R6
-!s107 C:/Users/tenor/OneDrive/Documentos/FAC_tarea/output_files/uart_tx.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tenor/OneDrive/Documentos/FAC_tarea/output_files|C:/Users/tenor/OneDrive/Documentos/FAC_tarea/output_files/uart_tx.sv|
+!s107 C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files/uart_tx.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files|C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files/uart_tx.sv|
 !i113 1
 R7
-!s92 -sv -work work +incdir+C:/Users/tenor/OneDrive/Documentos/FAC_tarea/output_files
+!s92 -sv -work work +incdir+C:/Users/lobok/Desktop/operativos/RBolanos-compu-archi-found-2G1-2024/FAC_SystemVerilog/output_files
 R9
